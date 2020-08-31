@@ -1,0 +1,18 @@
+{
+	"gameName":"Color square",
+	"adButtonText":"Continue",
+	"deadPaneCurrentCountText":"Score\n",
+	"deadPaneRecordText":"Record\n",
+	"newRecordText":"New record!",
+	"coolGame":"Your game is very cool!",
+	"rateGameText":"Rate the game",
+	"pausePaneText":"Pause",
+	"teachingTexts":["To turn right, click on the right side of the screen", 
+		"To turn left, click on the left side of the screen", 
+		"To fully rotate, click on any side of the screen 2 times", 
+		"Further you yourself. Good luck"],
+	"backgroundsButtonText":"Background",
+	"skinsButtonText":"Skin",
+	"donatesButtonText":"Donate",
+	"boughtText":"Bought"
+}

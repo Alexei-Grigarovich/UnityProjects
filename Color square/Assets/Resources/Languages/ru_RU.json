@@ -1,0 +1,18 @@
+{
+	"gameName":"Цветной квадрат",
+	"adButtonText":"Продолжить",
+	"deadPaneCurrentCountText":"Счёт\n",
+	"deadPaneRecordText":"Рекорд\n",
+	"newRecordText":"Новый рекорд!",
+	"coolGame":"Ваша игра очень крутая!",
+	"rateGameText":"Оцени игру!",
+	"pausePaneText":"Пауза",
+	"teachingTexts":["Для поворота направо, нажмите на правую часть экрана", 
+		"Для поворота налево, нажмите на левую часть экрана", 
+		"Для полного разворота, нажмите на любую часть экрана 2 раза", 
+		"Дальше сам. Удачи"],
+	"backgroundsButtonText":"Фон",
+	"skinsButtonText":"Скин",
+	"donatesButtonText":"Донат",
+	"boughtText":"Куплено"
+}
