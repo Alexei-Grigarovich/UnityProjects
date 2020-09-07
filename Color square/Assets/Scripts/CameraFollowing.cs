@@ -26,6 +26,7 @@ public class CameraFollowing : MonoBehaviour
 
     void Update()
     {
-        cameraTransform.position = new Vector3(objectTransform.position.x + offsetX, Mathf.Lerp(cameraTransform.position.y, objectTransform.position.y + offsetY, speedCameraFollowing * Time.unscaledDeltaTime), cameraTransform.position.z);
+        cameraTransform.position = new Vector3(objectTransform.position.x + offsetX, Mathf.Lerp(cameraTransform.position.y, 
+            objectTransform.position.y + offsetY, speedCameraFollowing * Time.unscaledDeltaTime), cameraTransform.position.z);
     }
 }

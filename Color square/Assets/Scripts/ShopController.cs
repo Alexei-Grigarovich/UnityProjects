@@ -20,6 +20,7 @@ public class ShopController : MonoBehaviour
     [SerializeField] private Text moneyText;
     [Space(15)]
     [SerializeField] private BackgroundController backgroundController;
+    [SerializeField] private SkinController skinController;
     [SerializeField] private PurchaseManager purchaseManager;
     [SerializeField] private MoneyController moneyController;
     [Space(15)]
@@ -139,6 +140,7 @@ public class ShopController : MonoBehaviour
                     backgroundController.setCurrentBackground(product.id, product.product, product.addition, true);
                     break;
                 case ShopProductType.skin:
+                    skinController.setCurrentSkin(product.id, product.product, product.addition);
                     break;
             }
         }

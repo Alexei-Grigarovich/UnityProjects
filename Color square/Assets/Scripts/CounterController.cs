@@ -61,7 +61,6 @@ public class CounterController : MonoBehaviour
                 StartCoroutine(newRecordShowCoroutine());
             }
 
-
             counter += PlatformSpawner.getPlatformSpeed() * Time.deltaTime;
         }
     }
