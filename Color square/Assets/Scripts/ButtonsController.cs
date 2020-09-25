@@ -9,6 +9,7 @@ public class ButtonsController : MonoBehaviour
 {
     [SerializeField] private MainSquareController mainSquareController;
     [SerializeField] private BackgroundController backgroundController;
+    [SerializeField] private SkinController skinController;
     [SerializeField] private AudioController audioController;
     [Space(15)]
     [SerializeField] private GameObject pausePane;
@@ -45,6 +46,7 @@ public class ButtonsController : MonoBehaviour
     private TextDeterminant textDeterminant;
     private PanesController panesController;
     private ShopController shopController;
+    private MoneyController moneyController;
 
     private Scene scene;
     private int timeLeft;
@@ -57,6 +59,7 @@ public class ButtonsController : MonoBehaviour
         languageController = GetComponent<LanguageController>();
         textDeterminant = GetComponent<TextDeterminant>();
         shopController = GetComponent<ShopController>();
+        moneyController = GetComponent<MoneyController>();
 
         languageButton.image.sprite = PlayerPrefs.GetString("Language") == LanguageController.ru ? russianButtonSprite : usaButtonSprite;
 
@@ -146,6 +149,12 @@ public class ButtonsController : MonoBehaviour
     public void instagramButtonAct()
     {
         Application.OpenURL("https://www.instagram.com/gamestepforwardinc/");
+
+        if (!PlayerPrefs.HasKey("InstagramGift")) {           
+            PlayerPrefs.SetInt("InstagramGift", 1);
+            moneyController.addToMoney(10);
+            moneyController.saveMoney();
+        }
     }
 
     public void mailButtonAct()
@@ -203,14 +212,13 @@ public class ButtonsController : MonoBehaviour
     }
 
     public void closeShopPaneButtonAct()
-    {
-        TimeCounter.isMenu = true;
+    {        
         panesController.hideShopPane();
     }
 
     public void ratingPaneAct()
     {
-        Application.OpenURL("https://play.google.com/store/apps/details?id=com.GameStepForwardInc.CosmicReaction");
+        Application.OpenURL("https://play.google.com/store/apps/details?id=com.gamestepforward.colorsquare");
     }
 
     private IEnumerator playButtonCoroutine(bool isStartAwake)
@@ -245,6 +253,7 @@ public class ButtonsController : MonoBehaviour
 
         MainSquareController.setIsPlay(true);
         backgroundController.play();
+        skinController.play();
 
         TimeCounter.saveTimeInGame();
 
@@ -287,6 +296,7 @@ public class ButtonsController : MonoBehaviour
         MainSquareController.setIsPlay(true);
 
         backgroundController.play();
+        skinController.play();
 
         pauseButton.gameObject.SetActive(true);
 
@@ -294,5 +304,3 @@ public class ButtonsController : MonoBehaviour
         mainSquareController.rideParticles.Play();    
     }   
 }
-
-

@@ -174,7 +174,7 @@ PlayerSettings:
     Android: com.gamestepforward.colorsquare
     Standalone: com.Company.ProductName
   buildNumber: {}
-  AndroidBundleVersionCode: 2
+  AndroidBundleVersionCode: 3
   AndroidMinSdkVersion: 21
   AndroidTargetSdkVersion: 29
   AndroidPreferredInstallLocation: 1
@@ -251,7 +251,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: D:/Unity Games/Keys/ColorSquare.keystore
+  AndroidKeystoreName: D:/Unity Projects/Keys/ColorSquare.keystore
   AndroidKeyaliasName: color square key
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0

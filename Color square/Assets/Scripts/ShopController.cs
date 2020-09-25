@@ -12,7 +12,9 @@ public enum ShopProductType
 public enum ProductAddition
 {
     blot,
-    triangles
+    triangles,
+    none,
+    detector
 }
 
 public class ShopController : MonoBehaviour
@@ -140,7 +142,7 @@ public class ShopController : MonoBehaviour
                     backgroundController.setCurrentBackground(product.id, product.product, product.addition, true);
                     break;
                 case ShopProductType.skin:
-                    skinController.setCurrentSkin(product.id, product.product, product.addition);
+                    skinController.setCurrentSkin(product.id, product.product, product.skinLayer, product.addition);
                     break;
             }
         }
@@ -156,6 +158,7 @@ public class ShopController : MonoBehaviour
                     backgroundController.previewBackground(product.product, product.addition);
                     break;
                 case ShopProductType.skin:
+                    skinController.previewSkin(product.product, product.skinLayer, product.addition);
                     break;
             }
         }

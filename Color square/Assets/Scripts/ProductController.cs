@@ -27,6 +27,7 @@ public class ProductController : MonoBehaviour
     public string purchaseStringId;
     [Space(15)]
     public Sprite product;
+    public Sprite skinLayer;
 
     public void initialize()
     {

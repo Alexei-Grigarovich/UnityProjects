@@ -11,6 +11,7 @@ public class PanesController : MonoBehaviour
     private CounterController counterController;
 
     [SerializeField] private BackgroundController backgroundController;
+    [SerializeField] private SkinController skinController;
     [SerializeField] private AudioController audioController;
     [Space(15)]
     [SerializeField] private GameObject counter;
@@ -61,6 +62,7 @@ public class PanesController : MonoBehaviour
         buttonsController.pauseButton.gameObject.SetActive(false);
 
         backgroundController.pause();
+        skinController.pause();
         audioController.changeSnapshot(MusicSnapshots.dead, 0.4f);
 
         lastDeadPaneCoroutine = StartCoroutine(deadPaneCoroutine(adIsWasUsed));
@@ -106,6 +108,8 @@ public class PanesController : MonoBehaviour
         buttonsController.noAdsButton.gameObject.SetActive(true);
         buttonsController.shopButton.gameObject.SetActive(true);
         buttonsController.settingsButton.gameObject.SetActive(true);
+
+        TimeCounter.isMenu = true;
     }
 
     private IEnumerator deadPaneCoroutine(bool adIsUsed)
@@ -140,6 +144,7 @@ public class PanesController : MonoBehaviour
         }
 
         backgroundController.stop();
+        skinController.stop();
 
         timer.SetActive(false);
         buttonsController.adButton.gameObject.SetActive(false);
@@ -166,6 +171,8 @@ public class PanesController : MonoBehaviour
 
     public IEnumerator showRatingPaneCoroutine()
     {
+        yield return new WaitUntil(() => TimeCounter.isMenu);
+
         yield return StartCoroutine(hidePaneCoroutine(settingsPane, true, true));
 
         buttonsController.playButton.gameObject.SetActive(false);
