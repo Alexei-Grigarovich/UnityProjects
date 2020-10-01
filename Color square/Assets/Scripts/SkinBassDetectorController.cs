@@ -12,8 +12,8 @@ public class SkinBassDetectorController : MonoBehaviour
     [SerializeField, Range(0, 1)] private float bassTrashhold;
     [SerializeField] private Vector2 maxScale;
 
-     public bool isPlay = false;
-     public bool isPause = false;
+    public bool isPlay = false;
+    public bool isPause = false;
 
     private float bassVolume;
 
