@@ -207,7 +207,6 @@ public class TeachingController : MonoBehaviour
         if (MainSquareController.getIsPlay() && !isStarted)
         {
             isStarted = true;
-            audioController.pauseMusic();
 
             int squareState = mainSquareController.squareState;
 

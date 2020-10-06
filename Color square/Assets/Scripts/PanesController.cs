@@ -15,13 +15,16 @@ public class PanesController : MonoBehaviour
     [SerializeField] private AudioController audioController;
     [Space(15)]
     [SerializeField] private GameObject counter;
-    [SerializeField] private GameObject deadPane;
+    [SerializeField] private GameObject deadPane;    
     [SerializeField] private GameObject settingsPane;
     [SerializeField] private GameObject shopPane;
     [SerializeField] private GameObject ratingPane;
     [SerializeField] private GameObject ratingPaneChildren;
     [SerializeField] private GameObject timer;
     [Space(15)]
+    [SerializeField] private RectTransform deadPaneBlurPane;
+    [Space(15)]
+    [SerializeField] private Image deadPaneImage;
     [SerializeField] private Image transitionPaneImage;
     [SerializeField] private Sprite smallPane;
     [SerializeField] private Sprite bigPane;
@@ -121,7 +124,10 @@ public class PanesController : MonoBehaviour
             buttonsController.againButton.gameObject.SetActive(false);
             buttonsController.menuButton.gameObject.SetActive(false);
 
-            deadPane.GetComponent<Image>().sprite = smallPane;
+            deadPaneBlurPane.offsetMin = new Vector2(40f, 175f);
+            deadPaneBlurPane.offsetMax = new Vector2(-40f, -175f);           
+
+            deadPaneImage.sprite = smallPane;
             deadPane.GetComponent<Animator>().SetBool("isHide", false);
 
             timerIsWork = true;
@@ -155,7 +161,10 @@ public class PanesController : MonoBehaviour
 
         reloadStat();
 
-        deadPane.GetComponent<Image>().sprite = bigPane;
+        deadPaneBlurPane.offsetMin = new Vector2(55f, 55f);
+        deadPaneBlurPane.offsetMax = new Vector2(-55f, -55f);
+
+        deadPaneImage.sprite = bigPane;
         deadPane.GetComponent<Animator>().SetBool("isHide", false);      
     }
 

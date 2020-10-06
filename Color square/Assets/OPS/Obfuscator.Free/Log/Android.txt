@@ -59,9 +59,9 @@ D:\Unity Projects\Color square\Library\PlayerScriptAssemblies\Assembly-CSharp-fi
 [Info][Process] Finished Step: Init Methods
 [Info][Process] Processing Step: Analyse Strings
 [Info][Analyse] [Assembly-CSharp] Analyse Strings...
-[Info][Analyse Files] Found Strings: 456
+[Info][Analyse Files] Found Strings: 459
 [Info][Analyse] [Assembly-CSharp-firstpass] Analyse Strings...
-[Info][Analyse Files] Found Strings: 513
+[Info][Analyse Files] Found Strings: 516
 [Info][Process] Finished Step: Analyse Strings
 [Info][Process] Processing Step: Analyse Files
 [Info][Analyse Files] Searching Gui Methods...
@@ -74,6 +74,8 @@ D:\Unity Projects\Color square\Library\PlayerScriptAssemblies\Assembly-CSharp-fi
 [Info][Process] Processing Step: Analyse Namespaces
 [Info][Analyse] [Assembly-CSharp] Analyse Namespaces...
 [Info][Skip Namespace] [[Assembly-CSharp]AdController] Because Obfuscator Free is used.
+[Info][Skip Namespace] [[Assembly-CSharp]AndroidController] Because Obfuscator Free is used.
+[Info][Skip Namespace] [[Assembly-CSharp]AndroidController] Because of some Addon: Obfuscator [Is Serializeable, some base is Serializeable or some field is Serializeable.]
 [Info][Skip Namespace] [[Assembly-CSharp]MusicSnapshots] Because Obfuscator Free is used.
 [Info][Skip Namespace] [[Assembly-CSharp]MusicSnapshots] Because of settings, 'do not obfuscate namespaces'.
 [Info][Skip Namespace] [[Assembly-CSharp]AudioController] Because Obfuscator Free is used.
@@ -111,12 +113,12 @@ D:\Unity Projects\Color square\Library\PlayerScriptAssemblies\Assembly-CSharp-fi
 [Info][Skip Namespace] [[Assembly-CSharp]ButtonsController/<>c] Because Obfuscator Free is used.
 [Info][Skip Namespace] [[Assembly-CSharp]ButtonsController/<>c] Because of some Addon: Obfuscator [Is Serializeable, some base is Serializeable or some field is Serializeable.]
 [Info][Skip Namespace] [[Assembly-CSharp]ButtonsController/<>c] Because of settings, 'do not obfuscate namespaces'.
-[Info][Skip Namespace] [[Assembly-CSharp]ButtonsController/<playButtonCoroutine>d__51] Because Obfuscator Free is used.
-[Info][Skip Namespace] [[Assembly-CSharp]ButtonsController/<playButtonCoroutine>d__51] Because of settings, 'do not obfuscate namespaces'.
-[Info][Skip Namespace] [[Assembly-CSharp]ButtonsController/<menuButtonCoroutine>d__52] Because Obfuscator Free is used.
-[Info][Skip Namespace] [[Assembly-CSharp]ButtonsController/<menuButtonCoroutine>d__52] Because of settings, 'do not obfuscate namespaces'.
-[Info][Skip Namespace] [[Assembly-CSharp]ButtonsController/<adButtonCoroutine>d__53] Because Obfuscator Free is used.
-[Info][Skip Namespace] [[Assembly-CSharp]ButtonsController/<adButtonCoroutine>d__53] Because of settings, 'do not obfuscate namespaces'.
+[Info][Skip Namespace] [[Assembly-CSharp]ButtonsController/<playButtonCoroutine>d__52] Because Obfuscator Free is used.
+[Info][Skip Namespace] [[Assembly-CSharp]ButtonsController/<playButtonCoroutine>d__52] Because of settings, 'do not obfuscate namespaces'.
+[Info][Skip Namespace] [[Assembly-CSharp]ButtonsController/<menuButtonCoroutine>d__53] Because Obfuscator Free is used.
+[Info][Skip Namespace] [[Assembly-CSharp]ButtonsController/<menuButtonCoroutine>d__53] Because of settings, 'do not obfuscate namespaces'.
+[Info][Skip Namespace] [[Assembly-CSharp]ButtonsController/<adButtonCoroutine>d__54] Because Obfuscator Free is used.
+[Info][Skip Namespace] [[Assembly-CSharp]ButtonsController/<adButtonCoroutine>d__54] Because of settings, 'do not obfuscate namespaces'.
 [Info][Skip Namespace] [[Assembly-CSharp]ButtonsController] Because Obfuscator Free is used.
 [Info][Skip Namespace] [[Assembly-CSharp]ButtonsController] Because of some Addon: Obfuscator [Is Serializeable, some base is Serializeable or some field is Serializeable.]
 [Info][Skip Namespace] [[Assembly-CSharp]CameraFollowing] Because Obfuscator Free is used.
@@ -188,6 +190,8 @@ D:\Unity Projects\Color square\Library\PlayerScriptAssemblies\Assembly-CSharp-fi
 [Info][Skip Namespace] [[Assembly-CSharp]ProductAddition] Because of settings, 'do not obfuscate namespaces'.
 [Info][Skip Namespace] [[Assembly-CSharp]ShopController/<>c__DisplayClass12_0] Because Obfuscator Free is used.
 [Info][Skip Namespace] [[Assembly-CSharp]ShopController/<>c__DisplayClass12_0] Because of settings, 'do not obfuscate namespaces'.
+[Info][Skip Namespace] [[Assembly-CSharp]ShopController/<buyButtonNoMoney>d__18] Because Obfuscator Free is used.
+[Info][Skip Namespace] [[Assembly-CSharp]ShopController/<buyButtonNoMoney>d__18] Because of settings, 'do not obfuscate namespaces'.
 [Info][Skip Namespace] [[Assembly-CSharp]ShopController] Because Obfuscator Free is used.
 [Info][Skip Namespace] [[Assembly-CSharp]ShopController] Because of some Addon: Obfuscator [Is Serializeable, some base is Serializeable or some field is Serializeable.]
 [Info][Skip Namespace] [[Assembly-CSharp]SkinBassDetectorController] Because Obfuscator Free is used.
@@ -2412,6 +2416,9 @@ D:\Unity Projects\Color square\Library\PlayerScriptAssemblies\Assembly-CSharp-fi
 [Info][Analyse] [Assembly-CSharp] Analyse Types...
 [Info][Skip Type] [[Assembly-CSharp]AdController] Because Unity Classes are not allowed to be obfuscated in Free.
 [Info][Skip Type] [[Assembly-CSharp]AdController] Because of global settings.
+[Info][Skip Type] [[Assembly-CSharp]AndroidController] Because of some addon: Obfuscator [Is Serializeable, some base is Serializeable or some field is Serializeable.]
+[Info][Skip Type] [[Assembly-CSharp]AndroidController] Because Unity Classes are not allowed to be obfuscated in Free.
+[Info][Skip Type] [[Assembly-CSharp]AndroidController] Because of global settings.
 [Info][Skip Type] [[Assembly-CSharp]AudioController] Because of some addon: Obfuscator [Is Serializeable, some base is Serializeable or some field is Serializeable.]
 [Info][Skip Type] [[Assembly-CSharp]AudioController] Because Unity Classes are not allowed to be obfuscated in Free.
 [Info][Skip Type] [[Assembly-CSharp]AudioController] Because of global settings.
@@ -2547,6 +2554,9 @@ D:\Unity Projects\Color square\Library\PlayerScriptAssemblies\Assembly-CSharp-fi
 [Info][Analyse] [Assembly-CSharp] Analyse Members...
 [Info][Skip Field] [[Assembly-CSharp]System.Boolean AdController::isNoAds] Because of the public unity fields setting.
 [Info][Skip Field] [[Assembly-CSharp]System.Boolean AdController::testMode] Because of the public unity fields setting.
+[Info][Skip Field] [[Assembly-CSharp]System.Single AndroidController::maxTimeToDoubleTap] Because of some addon: Obfuscator [Is Serializeable.]
+[Info][Skip Field] [[Assembly-CSharp]System.Single AndroidController::startTapTime] Because of some addon: Obfuscator [Class is Serializeable.]
+[Info][Skip Field] [[Assembly-CSharp]System.Boolean AndroidController::isDoubleTap] Because of some addon: Obfuscator [Class is Serializeable.]
 [Info][Skip Field] [[Assembly-CSharp]System.Int32 MusicSnapshots::value__] Because of some addon: .Net Framework [Is value__.]
 [Info][Skip Field] [[Assembly-CSharp]UnityEngine.Audio.AudioMixer AudioController::audioMixer] Because of some addon: Obfuscator [Is Serializeable.]
 [Info][Skip Field] [[Assembly-CSharp]UnityEngine.AudioSource AudioController::moneySound] Because of some addon: Obfuscator [Is Serializeable.]
@@ -2608,8 +2618,8 @@ D:\Unity Projects\Color square\Library\PlayerScriptAssemblies\Assembly-CSharp-fi
 [Info][Skip Field] [[Assembly-CSharp]System.Boolean BlotSpawner::isPause] Because of some addon: Obfuscator [Class is Serializeable.]
 [Info][Skip Field] [[Assembly-CSharp]System.Boolean BlotSpawner::isPause] Because of the public unity fields setting.
 [Info][Skip Field] [[Assembly-CSharp]ButtonsController/<>c ButtonsController/<>c::<>9] Because of some addon: Obfuscator [Class is Serializeable.]
-[Info][Skip Field] [[Assembly-CSharp]System.Func`1<System.Boolean> ButtonsController/<>c::<>9__51_0] Because of some addon: Obfuscator [Class is Serializeable.]
-[Info][Skip Field] [[Assembly-CSharp]System.Func`1<System.Boolean> ButtonsController/<>c::<>9__53_0] Because of some addon: Obfuscator [Class is Serializeable.]
+[Info][Skip Field] [[Assembly-CSharp]System.Func`1<System.Boolean> ButtonsController/<>c::<>9__52_0] Because of some addon: Obfuscator [Class is Serializeable.]
+[Info][Skip Field] [[Assembly-CSharp]System.Func`1<System.Boolean> ButtonsController/<>c::<>9__54_0] Because of some addon: Obfuscator [Class is Serializeable.]
 [Info][Skip Field] [[Assembly-CSharp]MainSquareController ButtonsController::mainSquareController] Because of some addon: Obfuscator [Is Serializeable.]
 [Info][Skip Field] [[Assembly-CSharp]BackgroundController ButtonsController::backgroundController] Because of some addon: Obfuscator [Is Serializeable.]
 [Info][Skip Field] [[Assembly-CSharp]SkinController ButtonsController::skinController] Because of some addon: Obfuscator [Is Serializeable.]
@@ -2655,6 +2665,7 @@ D:\Unity Projects\Color square\Library\PlayerScriptAssemblies\Assembly-CSharp-fi
 [Info][Skip Field] [[Assembly-CSharp]TextDeterminant ButtonsController::textDeterminant] Because of some addon: Obfuscator [Class is Serializeable.]
 [Info][Skip Field] [[Assembly-CSharp]PanesController ButtonsController::panesController] Because of some addon: Obfuscator [Class is Serializeable.]
 [Info][Skip Field] [[Assembly-CSharp]ShopController ButtonsController::shopController] Because of some addon: Obfuscator [Class is Serializeable.]
+[Info][Skip Field] [[Assembly-CSharp]MoneyController ButtonsController::moneyController] Because of some addon: Obfuscator [Class is Serializeable.]
 [Info][Skip Field] [[Assembly-CSharp]UnityEngine.SceneManagement.Scene ButtonsController::scene] Because of some addon: Obfuscator [Class is Serializeable.]
 [Info][Skip Field] [[Assembly-CSharp]System.Int32 ButtonsController::timeLeft] Because of some addon: Obfuscator [Class is Serializeable.]
 [Info][Skip Field] [[Assembly-CSharp]UnityEngine.Transform CameraFollowing::cameraTransform] Because of some addon: Obfuscator [Class is Serializeable.]
@@ -2798,7 +2809,7 @@ D:\Unity Projects\Color square\Library\PlayerScriptAssemblies\Assembly-CSharp-fi
 [Info][Skip Field] [[Assembly-CSharp]UnityEngine.UI.Button ProductController::selectButton] Because of the public unity fields setting.
 [Info][Skip Field] [[Assembly-CSharp]UnityEngine.UI.Button ProductController::previewButton] Because of the public unity fields setting.
 [Info][Skip Field] [[Assembly-CSharp]System.Int32 ProductController::id] Because of the public unity fields setting.
-[Info][Skip Field] [[Assembly-CSharp]System.Int32 ProductController::price] Because of the public unity fields setting.
+[Info][Skip Field] [[Assembly-CSharp]System.Single ProductController::price] Because of the public unity fields setting.
 [Info][Skip Field] [[Assembly-CSharp]ShopProductType ProductController::type] Because of the public unity fields setting.
 [Info][Skip Field] [[Assembly-CSharp]ProductAddition ProductController::addition] Because of the public unity fields setting.
 [Info][Skip Field] [[Assembly-CSharp]System.Boolean ProductController::isAvailable] Because of the public unity fields setting.
@@ -2981,6 +2992,8 @@ D:\Unity Projects\Color square\Library\PlayerScriptAssemblies\Assembly-CSharp-fi
 [Info][Skip Method] [[Assembly-CSharp]AdController::Start()] Because of some Addon: Unity [Is Unity Method.]
 [Info][Skip Method] [[Assembly-CSharp]AdController::.ctor()] Because of some Addon: .Net Framework [Is Special.]
 [Info][Skip Method] [[Assembly-CSharp]AdController::.cctor()] Because of some Addon: .Net Framework [Is Special.]
+[Info][Skip Method] [[Assembly-CSharp]AndroidController::Update()] Because of some Addon: Unity [Is Editor Method.]
+[Info][Skip Method] [[Assembly-CSharp]AndroidController::.ctor()] Because of some Addon: .Net Framework [Is Special.]
 [Info][Skip Method] [[Assembly-CSharp]AudioController::Start()] Because of some Addon: Unity [Is Unity Method.]
 [Info][Skip Method] [[Assembly-CSharp]AudioController::Update()] Because of some Addon: Unity [Is Editor Method.]
 [Info][Skip Method] [[Assembly-CSharp]AudioController::.ctor()] Because of some Addon: .Net Framework [Is Special.]
@@ -3023,12 +3036,12 @@ D:\Unity Projects\Color square\Library\PlayerScriptAssemblies\Assembly-CSharp-fi
 [Info][Skip Method] [[Assembly-CSharp]BlotSpawner::.cctor()] Because of some Addon: .Net Framework [Is Special.]
 [Info][Skip Method] [[Assembly-CSharp]ButtonsController/<>c::.cctor()] Because of some Addon: .Net Framework [Is Special.]
 [Info][Skip Method] [[Assembly-CSharp]ButtonsController/<>c::.ctor()] Because of some Addon: .Net Framework [Is Special.]
-[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<playButtonCoroutine>d__51::.ctor([mscorlib]System.Int32)] Because of some Addon: .Net Framework [Is Special.]
-[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<playButtonCoroutine>d__51::MoveNext()] Because of some Addon: .Net Framework [Is Special.]
-[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<menuButtonCoroutine>d__52::.ctor([mscorlib]System.Int32)] Because of some Addon: .Net Framework [Is Special.]
-[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<menuButtonCoroutine>d__52::MoveNext()] Because of some Addon: .Net Framework [Is Special.]
-[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<adButtonCoroutine>d__53::.ctor([mscorlib]System.Int32)] Because of some Addon: .Net Framework [Is Special.]
-[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<adButtonCoroutine>d__53::MoveNext()] Because of some Addon: .Net Framework [Is Special.]
+[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<playButtonCoroutine>d__52::.ctor([mscorlib]System.Int32)] Because of some Addon: .Net Framework [Is Special.]
+[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<playButtonCoroutine>d__52::MoveNext()] Because of some Addon: .Net Framework [Is Special.]
+[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<menuButtonCoroutine>d__53::.ctor([mscorlib]System.Int32)] Because of some Addon: .Net Framework [Is Special.]
+[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<menuButtonCoroutine>d__53::MoveNext()] Because of some Addon: .Net Framework [Is Special.]
+[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<adButtonCoroutine>d__54::.ctor([mscorlib]System.Int32)] Because of some Addon: .Net Framework [Is Special.]
+[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<adButtonCoroutine>d__54::MoveNext()] Because of some Addon: .Net Framework [Is Special.]
 [Info][Skip Method] [[Assembly-CSharp]ButtonsController::Start()] Because of some Addon: Unity [Is Unity Method.]
 [Info][Skip Method] [[Assembly-CSharp]ButtonsController::menuButtonAct()] Because of some Addon: Gui or Animation method
 [Info][Skip Method] [[Assembly-CSharp]ButtonsController::againButtonAct()] Because of some Addon: Gui or Animation method
@@ -3136,6 +3149,8 @@ D:\Unity Projects\Color square\Library\PlayerScriptAssemblies\Assembly-CSharp-fi
 [Info][Skip Method] [[Assembly-CSharp]PurchaseManager::BuyNonConsumable([mscorlib]System.Int32)] Because of some Addon: Gui or Animation method
 [Info][Skip Method] [[Assembly-CSharp]PurchaseManager::.ctor()] Because of some Addon: .Net Framework [Is Special.]
 [Info][Skip Method] [[Assembly-CSharp]ShopController/<>c__DisplayClass12_0::.ctor()] Because of some Addon: .Net Framework [Is Special.]
+[Info][Skip Method] [[Assembly-CSharp]ShopController/<buyButtonNoMoney>d__18::.ctor([mscorlib]System.Int32)] Because of some Addon: .Net Framework [Is Special.]
+[Info][Skip Method] [[Assembly-CSharp]ShopController/<buyButtonNoMoney>d__18::MoveNext()] Because of some Addon: .Net Framework [Is Special.]
 [Info][Skip Method] [[Assembly-CSharp]ShopController::Start()] Because of some Addon: Unity [Is Unity Method.]
 [Info][Skip Method] [[Assembly-CSharp]ShopController::.ctor()] Because of some Addon: .Net Framework [Is Special.]
 [Info][Skip Method] [[Assembly-CSharp]SkinBassDetectorController::Start()] Because of some Addon: Unity [Is Unity Method.]
@@ -3457,30 +3472,30 @@ D:\Unity Projects\Color square\Library\PlayerScriptAssemblies\Assembly-CSharp-fi
 [Info][Skip Method] [[Assembly-CSharp]BlotSpawner/<spawnCoroutine>d__16::System.Collections.IEnumerator.Reset()] Some other method in method group getting skipped.
 [Info][Skip Method] [[Assembly-CSharp]BlotSpawner/<spawnCoroutine>d__16::System.Collections.IEnumerator.get_Current()] Method group is defined extern (in some assembly that gets not obfuscated).
 [Info][Skip Method] [[Assembly-CSharp]BlotSpawner/<spawnCoroutine>d__16::System.Collections.IEnumerator.get_Current()] Some other method in method group getting skipped.
-[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<playButtonCoroutine>d__51::System.IDisposable.Dispose()] Method group is defined extern (in some assembly that gets not obfuscated).
-[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<playButtonCoroutine>d__51::System.IDisposable.Dispose()] Some other method in method group getting skipped.
-[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<playButtonCoroutine>d__51::MoveNext()] Method group is defined extern (in some assembly that gets not obfuscated).
-[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<playButtonCoroutine>d__51::MoveNext()] Some other method in method group getting skipped.
-[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<playButtonCoroutine>d__51::System.Collections.IEnumerator.Reset()] Method group is defined extern (in some assembly that gets not obfuscated).
-[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<playButtonCoroutine>d__51::System.Collections.IEnumerator.Reset()] Some other method in method group getting skipped.
-[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<playButtonCoroutine>d__51::System.Collections.IEnumerator.get_Current()] Method group is defined extern (in some assembly that gets not obfuscated).
-[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<playButtonCoroutine>d__51::System.Collections.IEnumerator.get_Current()] Some other method in method group getting skipped.
-[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<menuButtonCoroutine>d__52::System.IDisposable.Dispose()] Method group is defined extern (in some assembly that gets not obfuscated).
-[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<menuButtonCoroutine>d__52::System.IDisposable.Dispose()] Some other method in method group getting skipped.
-[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<menuButtonCoroutine>d__52::MoveNext()] Method group is defined extern (in some assembly that gets not obfuscated).
-[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<menuButtonCoroutine>d__52::MoveNext()] Some other method in method group getting skipped.
-[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<menuButtonCoroutine>d__52::System.Collections.IEnumerator.Reset()] Method group is defined extern (in some assembly that gets not obfuscated).
-[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<menuButtonCoroutine>d__52::System.Collections.IEnumerator.Reset()] Some other method in method group getting skipped.
-[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<menuButtonCoroutine>d__52::System.Collections.IEnumerator.get_Current()] Method group is defined extern (in some assembly that gets not obfuscated).
-[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<menuButtonCoroutine>d__52::System.Collections.IEnumerator.get_Current()] Some other method in method group getting skipped.
-[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<adButtonCoroutine>d__53::System.IDisposable.Dispose()] Method group is defined extern (in some assembly that gets not obfuscated).
-[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<adButtonCoroutine>d__53::System.IDisposable.Dispose()] Some other method in method group getting skipped.
-[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<adButtonCoroutine>d__53::MoveNext()] Method group is defined extern (in some assembly that gets not obfuscated).
-[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<adButtonCoroutine>d__53::MoveNext()] Some other method in method group getting skipped.
-[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<adButtonCoroutine>d__53::System.Collections.IEnumerator.Reset()] Method group is defined extern (in some assembly that gets not obfuscated).
-[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<adButtonCoroutine>d__53::System.Collections.IEnumerator.Reset()] Some other method in method group getting skipped.
-[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<adButtonCoroutine>d__53::System.Collections.IEnumerator.get_Current()] Method group is defined extern (in some assembly that gets not obfuscated).
-[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<adButtonCoroutine>d__53::System.Collections.IEnumerator.get_Current()] Some other method in method group getting skipped.
+[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<playButtonCoroutine>d__52::System.IDisposable.Dispose()] Method group is defined extern (in some assembly that gets not obfuscated).
+[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<playButtonCoroutine>d__52::System.IDisposable.Dispose()] Some other method in method group getting skipped.
+[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<playButtonCoroutine>d__52::MoveNext()] Method group is defined extern (in some assembly that gets not obfuscated).
+[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<playButtonCoroutine>d__52::MoveNext()] Some other method in method group getting skipped.
+[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<playButtonCoroutine>d__52::System.Collections.IEnumerator.Reset()] Method group is defined extern (in some assembly that gets not obfuscated).
+[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<playButtonCoroutine>d__52::System.Collections.IEnumerator.Reset()] Some other method in method group getting skipped.
+[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<playButtonCoroutine>d__52::System.Collections.IEnumerator.get_Current()] Method group is defined extern (in some assembly that gets not obfuscated).
+[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<playButtonCoroutine>d__52::System.Collections.IEnumerator.get_Current()] Some other method in method group getting skipped.
+[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<menuButtonCoroutine>d__53::System.IDisposable.Dispose()] Method group is defined extern (in some assembly that gets not obfuscated).
+[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<menuButtonCoroutine>d__53::System.IDisposable.Dispose()] Some other method in method group getting skipped.
+[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<menuButtonCoroutine>d__53::MoveNext()] Method group is defined extern (in some assembly that gets not obfuscated).
+[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<menuButtonCoroutine>d__53::MoveNext()] Some other method in method group getting skipped.
+[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<menuButtonCoroutine>d__53::System.Collections.IEnumerator.Reset()] Method group is defined extern (in some assembly that gets not obfuscated).
+[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<menuButtonCoroutine>d__53::System.Collections.IEnumerator.Reset()] Some other method in method group getting skipped.
+[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<menuButtonCoroutine>d__53::System.Collections.IEnumerator.get_Current()] Method group is defined extern (in some assembly that gets not obfuscated).
+[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<menuButtonCoroutine>d__53::System.Collections.IEnumerator.get_Current()] Some other method in method group getting skipped.
+[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<adButtonCoroutine>d__54::System.IDisposable.Dispose()] Method group is defined extern (in some assembly that gets not obfuscated).
+[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<adButtonCoroutine>d__54::System.IDisposable.Dispose()] Some other method in method group getting skipped.
+[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<adButtonCoroutine>d__54::MoveNext()] Method group is defined extern (in some assembly that gets not obfuscated).
+[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<adButtonCoroutine>d__54::MoveNext()] Some other method in method group getting skipped.
+[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<adButtonCoroutine>d__54::System.Collections.IEnumerator.Reset()] Method group is defined extern (in some assembly that gets not obfuscated).
+[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<adButtonCoroutine>d__54::System.Collections.IEnumerator.Reset()] Some other method in method group getting skipped.
+[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<adButtonCoroutine>d__54::System.Collections.IEnumerator.get_Current()] Method group is defined extern (in some assembly that gets not obfuscated).
+[Info][Skip Method] [[Assembly-CSharp]ButtonsController/<adButtonCoroutine>d__54::System.Collections.IEnumerator.get_Current()] Some other method in method group getting skipped.
 [Info][Skip Method] [[Assembly-CSharp]CounterController/<newRecordShowCoroutine>d__10::System.IDisposable.Dispose()] Method group is defined extern (in some assembly that gets not obfuscated).
 [Info][Skip Method] [[Assembly-CSharp]CounterController/<newRecordShowCoroutine>d__10::System.IDisposable.Dispose()] Some other method in method group getting skipped.
 [Info][Skip Method] [[Assembly-CSharp]CounterController/<newRecordShowCoroutine>d__10::MoveNext()] Method group is defined extern (in some assembly that gets not obfuscated).
@@ -3549,6 +3564,14 @@ D:\Unity Projects\Color square\Library\PlayerScriptAssemblies\Assembly-CSharp-fi
 [Info][Skip Method] [[Assembly-CSharp]PurchaseManager::OnInitializeFailed([UnityEngine.Purchasing]UnityEngine.Purchasing.InitializationFailureReason)] Method group is defined extern (in some assembly that gets not obfuscated).
 [Info][Skip Method] [[Assembly-CSharp]PurchaseManager::ProcessPurchase([UnityEngine.Purchasing]UnityEngine.Purchasing.PurchaseEventArgs)] Method group is defined extern (in some assembly that gets not obfuscated).
 [Info][Skip Method] [[Assembly-CSharp]PurchaseManager::OnPurchaseFailed([UnityEngine.Purchasing]UnityEngine.Purchasing.Product [UnityEngine.Purchasing]UnityEngine.Purchasing.PurchaseFailureReason)] Method group is defined extern (in some assembly that gets not obfuscated).
+[Info][Skip Method] [[Assembly-CSharp]ShopController/<buyButtonNoMoney>d__18::System.IDisposable.Dispose()] Method group is defined extern (in some assembly that gets not obfuscated).
+[Info][Skip Method] [[Assembly-CSharp]ShopController/<buyButtonNoMoney>d__18::System.IDisposable.Dispose()] Some other method in method group getting skipped.
+[Info][Skip Method] [[Assembly-CSharp]ShopController/<buyButtonNoMoney>d__18::MoveNext()] Method group is defined extern (in some assembly that gets not obfuscated).
+[Info][Skip Method] [[Assembly-CSharp]ShopController/<buyButtonNoMoney>d__18::MoveNext()] Some other method in method group getting skipped.
+[Info][Skip Method] [[Assembly-CSharp]ShopController/<buyButtonNoMoney>d__18::System.Collections.IEnumerator.Reset()] Method group is defined extern (in some assembly that gets not obfuscated).
+[Info][Skip Method] [[Assembly-CSharp]ShopController/<buyButtonNoMoney>d__18::System.Collections.IEnumerator.Reset()] Some other method in method group getting skipped.
+[Info][Skip Method] [[Assembly-CSharp]ShopController/<buyButtonNoMoney>d__18::System.Collections.IEnumerator.get_Current()] Method group is defined extern (in some assembly that gets not obfuscated).
+[Info][Skip Method] [[Assembly-CSharp]ShopController/<buyButtonNoMoney>d__18::System.Collections.IEnumerator.get_Current()] Some other method in method group getting skipped.
 [Info][Skip Method] [[Assembly-CSharp]SkinController/<previewSkinCoroutine>d__26::System.IDisposable.Dispose()] Method group is defined extern (in some assembly that gets not obfuscated).
 [Info][Skip Method] [[Assembly-CSharp]SkinController/<previewSkinCoroutine>d__26::System.IDisposable.Dispose()] Some other method in method group getting skipped.
 [Info][Skip Method] [[Assembly-CSharp]SkinController/<previewSkinCoroutine>d__26::MoveNext()] Method group is defined extern (in some assembly that gets not obfuscated).
@@ -4093,22 +4116,22 @@ D:\Unity Projects\Color square\Library\PlayerScriptAssemblies\Assembly-CSharp-fi
 [Info][Found new Field Name] [[Assembly-CSharp]BlotSpawner BlotSpawner/<spawnCoroutine>d__16::<>4__this] : l
 [Info][Found new Property Name] [[Assembly-CSharp]System.Object BlotSpawner/<spawnCoroutine>d__16::System.Collections.Generic.IEnumerator<System.Object>.Current] : a
 [Info][Found new Property Name] [[Assembly-CSharp]System.Object BlotSpawner/<spawnCoroutine>d__16::System.Collections.IEnumerator.Current] : b
-[Info][Found new Field Name] [[Assembly-CSharp]System.Int32 ButtonsController/<playButtonCoroutine>d__51::<>1__state] : j
-[Info][Found new Field Name] [[Assembly-CSharp]System.Object ButtonsController/<playButtonCoroutine>d__51::<>2__current] : k
-[Info][Found new Field Name] [[Assembly-CSharp]System.Boolean ButtonsController/<playButtonCoroutine>d__51::isStartAwake] : y
-[Info][Found new Field Name] [[Assembly-CSharp]ButtonsController ButtonsController/<playButtonCoroutine>d__51::<>4__this] : l
-[Info][Found new Property Name] [[Assembly-CSharp]System.Object ButtonsController/<playButtonCoroutine>d__51::System.Collections.Generic.IEnumerator<System.Object>.Current] : a
-[Info][Found new Property Name] [[Assembly-CSharp]System.Object ButtonsController/<playButtonCoroutine>d__51::System.Collections.IEnumerator.Current] : b
-[Info][Found new Field Name] [[Assembly-CSharp]System.Int32 ButtonsController/<menuButtonCoroutine>d__52::<>1__state] : j
-[Info][Found new Field Name] [[Assembly-CSharp]System.Object ButtonsController/<menuButtonCoroutine>d__52::<>2__current] : k
-[Info][Found new Field Name] [[Assembly-CSharp]ButtonsController ButtonsController/<menuButtonCoroutine>d__52::<>4__this] : l
-[Info][Found new Property Name] [[Assembly-CSharp]System.Object ButtonsController/<menuButtonCoroutine>d__52::System.Collections.Generic.IEnumerator<System.Object>.Current] : a
-[Info][Found new Property Name] [[Assembly-CSharp]System.Object ButtonsController/<menuButtonCoroutine>d__52::System.Collections.IEnumerator.Current] : b
-[Info][Found new Field Name] [[Assembly-CSharp]System.Int32 ButtonsController/<adButtonCoroutine>d__53::<>1__state] : j
-[Info][Found new Field Name] [[Assembly-CSharp]System.Object ButtonsController/<adButtonCoroutine>d__53::<>2__current] : k
-[Info][Found new Field Name] [[Assembly-CSharp]ButtonsController ButtonsController/<adButtonCoroutine>d__53::<>4__this] : l
-[Info][Found new Property Name] [[Assembly-CSharp]System.Object ButtonsController/<adButtonCoroutine>d__53::System.Collections.Generic.IEnumerator<System.Object>.Current] : a
-[Info][Found new Property Name] [[Assembly-CSharp]System.Object ButtonsController/<adButtonCoroutine>d__53::System.Collections.IEnumerator.Current] : b
+[Info][Found new Field Name] [[Assembly-CSharp]System.Int32 ButtonsController/<playButtonCoroutine>d__52::<>1__state] : j
+[Info][Found new Field Name] [[Assembly-CSharp]System.Object ButtonsController/<playButtonCoroutine>d__52::<>2__current] : k
+[Info][Found new Field Name] [[Assembly-CSharp]System.Boolean ButtonsController/<playButtonCoroutine>d__52::isStartAwake] : y
+[Info][Found new Field Name] [[Assembly-CSharp]ButtonsController ButtonsController/<playButtonCoroutine>d__52::<>4__this] : l
+[Info][Found new Property Name] [[Assembly-CSharp]System.Object ButtonsController/<playButtonCoroutine>d__52::System.Collections.Generic.IEnumerator<System.Object>.Current] : a
+[Info][Found new Property Name] [[Assembly-CSharp]System.Object ButtonsController/<playButtonCoroutine>d__52::System.Collections.IEnumerator.Current] : b
+[Info][Found new Field Name] [[Assembly-CSharp]System.Int32 ButtonsController/<menuButtonCoroutine>d__53::<>1__state] : j
+[Info][Found new Field Name] [[Assembly-CSharp]System.Object ButtonsController/<menuButtonCoroutine>d__53::<>2__current] : k
+[Info][Found new Field Name] [[Assembly-CSharp]ButtonsController ButtonsController/<menuButtonCoroutine>d__53::<>4__this] : l
+[Info][Found new Property Name] [[Assembly-CSharp]System.Object ButtonsController/<menuButtonCoroutine>d__53::System.Collections.Generic.IEnumerator<System.Object>.Current] : a
+[Info][Found new Property Name] [[Assembly-CSharp]System.Object ButtonsController/<menuButtonCoroutine>d__53::System.Collections.IEnumerator.Current] : b
+[Info][Found new Field Name] [[Assembly-CSharp]System.Int32 ButtonsController/<adButtonCoroutine>d__54::<>1__state] : j
+[Info][Found new Field Name] [[Assembly-CSharp]System.Object ButtonsController/<adButtonCoroutine>d__54::<>2__current] : k
+[Info][Found new Field Name] [[Assembly-CSharp]ButtonsController ButtonsController/<adButtonCoroutine>d__54::<>4__this] : l
+[Info][Found new Property Name] [[Assembly-CSharp]System.Object ButtonsController/<adButtonCoroutine>d__54::System.Collections.Generic.IEnumerator<System.Object>.Current] : a
+[Info][Found new Property Name] [[Assembly-CSharp]System.Object ButtonsController/<adButtonCoroutine>d__54::System.Collections.IEnumerator.Current] : b
 [Info][Found new Field Name] [[Assembly-CSharp]UnityEngine.Camera CameraScaling::componentCamera] : z
 [Info][Found new Field Name] [[Assembly-CSharp]System.Single CameraScaling::initialSize] : ba
 [Info][Found new Field Name] [[Assembly-CSharp]System.Single CameraScaling::targetAspect] : bb
@@ -4190,6 +4213,11 @@ D:\Unity Projects\Color square\Library\PlayerScriptAssemblies\Assembly-CSharp-fi
 [Info][Found new Field Name] [[Assembly-CSharp]ProductAddition ProductAddition::detector] : cf
 [Info][Found new Field Name] [[Assembly-CSharp]ProductController ShopController/<>c__DisplayClass12_0::product] : cg
 [Info][Found new Field Name] [[Assembly-CSharp]ShopController ShopController/<>c__DisplayClass12_0::<>4__this] : l
+[Info][Found new Field Name] [[Assembly-CSharp]System.Int32 ShopController/<buyButtonNoMoney>d__18::<>1__state] : j
+[Info][Found new Field Name] [[Assembly-CSharp]System.Object ShopController/<buyButtonNoMoney>d__18::<>2__current] : k
+[Info][Found new Field Name] [[Assembly-CSharp]ProductController ShopController/<buyButtonNoMoney>d__18::product] : cg
+[Info][Found new Property Name] [[Assembly-CSharp]System.Object ShopController/<buyButtonNoMoney>d__18::System.Collections.Generic.IEnumerator<System.Object>.Current] : a
+[Info][Found new Property Name] [[Assembly-CSharp]System.Object ShopController/<buyButtonNoMoney>d__18::System.Collections.IEnumerator.Current] : b
 [Info][Found new Field Name] [[Assembly-CSharp]System.Int32 SkinController/<previewSkinCoroutine>d__26::<>1__state] : j
 [Info][Found new Field Name] [[Assembly-CSharp]System.Object SkinController/<previewSkinCoroutine>d__26::<>2__current] : k
 [Info][Found new Field Name] [[Assembly-CSharp]SkinController SkinController/<previewSkinCoroutine>d__26::<>4__this] : l
@@ -4292,11 +4320,11 @@ D:\Unity Projects\Color square\Library\PlayerScriptAssemblies\Assembly-CSharp-fi
 [Info][Found new Method Name] [[Assembly-CSharp]BlotSpawner::stopRideBlots()] : bu
 [Info][Found new Method Name] [[Assembly-CSharp]BlotSpawner::spawnCoroutine()] : bv
 [Info][Found new Method Name] [[Assembly-CSharp]BlotSpawner::spawnRandomBlot()] : bw
-[Info][Found new Method Name] [[Assembly-CSharp]ButtonsController/<>c::<playButtonCoroutine>b__51_0()] : bx
-[Info][Found new Method Name] [[Assembly-CSharp]ButtonsController/<>c::<adButtonCoroutine>b__53_0()] : by
-[Info][Found new Method Name] [[Assembly-CSharp]ButtonsController/<playButtonCoroutine>d__51::System.Collections.Generic.IEnumerator<System.Object>.get_Current()] : bz
-[Info][Found new Method Name] [[Assembly-CSharp]ButtonsController/<menuButtonCoroutine>d__52::System.Collections.Generic.IEnumerator<System.Object>.get_Current()] : ca
-[Info][Found new Method Name] [[Assembly-CSharp]ButtonsController/<adButtonCoroutine>d__53::System.Collections.Generic.IEnumerator<System.Object>.get_Current()] : cb
+[Info][Found new Method Name] [[Assembly-CSharp]ButtonsController/<>c::<playButtonCoroutine>b__52_0()] : bx
+[Info][Found new Method Name] [[Assembly-CSharp]ButtonsController/<>c::<adButtonCoroutine>b__54_0()] : by
+[Info][Found new Method Name] [[Assembly-CSharp]ButtonsController/<playButtonCoroutine>d__52::System.Collections.Generic.IEnumerator<System.Object>.get_Current()] : bz
+[Info][Found new Method Name] [[Assembly-CSharp]ButtonsController/<menuButtonCoroutine>d__53::System.Collections.Generic.IEnumerator<System.Object>.get_Current()] : ca
+[Info][Found new Method Name] [[Assembly-CSharp]ButtonsController/<adButtonCoroutine>d__54::System.Collections.Generic.IEnumerator<System.Object>.get_Current()] : cb
 [Info][Found new Method Name] [[Assembly-CSharp]ButtonsController::invokeOnClickShopButton([mscorlib]System.Int32)] : cc
 [Info][Found new Method Name] [[Assembly-CSharp]ButtonsController::playButtonCoroutine([mscorlib]System.Boolean)] : cd
 [Info][Found new Method Name] [[Assembly-CSharp]ButtonsController::menuButtonCoroutine()] : ce
@@ -4385,95 +4413,97 @@ D:\Unity Projects\Color square\Library\PlayerScriptAssemblies\Assembly-CSharp-fi
 [Info][Found new Method Name] [[Assembly-CSharp]ShopController/<>c__DisplayClass12_0::<initializeProducts>b__0()] : fj
 [Info][Found new Method Name] [[Assembly-CSharp]ShopController/<>c__DisplayClass12_0::<initializeProducts>b__1()] : fk
 [Info][Found new Method Name] [[Assembly-CSharp]ShopController/<>c__DisplayClass12_0::<initializeProducts>b__2()] : fl
-[Info][Found new Method Name] [[Assembly-CSharp]ShopController::PurchaseManager_OnPurchaseConsumable([UnityEngine.Purchasing]UnityEngine.Purchasing.PurchaseEventArgs)] : fm
-[Info][Found new Method Name] [[Assembly-CSharp]ShopController::PurchaseManager_OnPurchaseNonConsumable([UnityEngine.Purchasing]UnityEngine.Purchasing.PurchaseEventArgs)] : fn
-[Info][Found new Method Name] [[Assembly-CSharp]ShopController::findProduct([mscorlib]System.Int32 [Assembly-CSharp]ShopProductType)] : fo
-[Info][Found new Method Name] [[Assembly-CSharp]ShopController::findPurchaseProduct([mscorlib]System.Int32 [Assembly-CSharp]ShopProductType)] : fp
-[Info][Found new Method Name] [[Assembly-CSharp]ShopController::initializeProducts()] : fq
-[Info][Found new Method Name] [[Assembly-CSharp]ShopController::updateProductButtonsText()] : fr
-[Info][Found new Method Name] [[Assembly-CSharp]ShopController::buyProduct([Assembly-CSharp]ProductController)] : fs
-[Info][Found new Method Name] [[Assembly-CSharp]ShopController::selectProduct([Assembly-CSharp]ProductController)] : ft
-[Info][Found new Method Name] [[Assembly-CSharp]ShopController::previewProduct([Assembly-CSharp]ProductController)] : fu
-[Info][Found new Method Name] [[Assembly-CSharp]ShopController::updateMoneyText()] : fv
-[Info][Found new Method Name] [[Assembly-CSharp]SkinBassDetectorController::play()] : fw
-[Info][Found new Method Name] [[Assembly-CSharp]SkinBassDetectorController::stop()] : fx
-[Info][Found new Method Name] [[Assembly-CSharp]SkinBassDetectorController::pause()] : fy
-[Info][Found new Method Name] [[Assembly-CSharp]SkinController/<>c::<previewSkinCoroutine>b__26_0()] : fz
-[Info][Found new Method Name] [[Assembly-CSharp]SkinController/<previewSkinCoroutine>d__26::System.Collections.Generic.IEnumerator<System.Object>.get_Current()] : ga
-[Info][Found new Method Name] [[Assembly-CSharp]SkinController/<stopPreviewSkinCoroutine>d__27::System.Collections.Generic.IEnumerator<System.Object>.get_Current()] : gb
-[Info][Found new Method Name] [[Assembly-CSharp]SkinController::setCurrentSkin([mscorlib]System.Int32 [UnityEngine.CoreModule]UnityEngine.Sprite [UnityEngine.CoreModule]UnityEngine.Sprite [Assembly-CSharp]ProductAddition)] : gc
-[Info][Found new Method Name] [[Assembly-CSharp]SkinController::setSkinSprite([UnityEngine.CoreModule]UnityEngine.Sprite [UnityEngine.CoreModule]UnityEngine.Sprite)] : gd
-[Info][Found new Method Name] [[Assembly-CSharp]SkinController::previewSkin([UnityEngine.CoreModule]UnityEngine.Sprite [UnityEngine.CoreModule]UnityEngine.Sprite [Assembly-CSharp]ProductAddition)] : ge
-[Info][Found new Method Name] [[Assembly-CSharp]SkinController::play()] : gf
-[Info][Found new Method Name] [[Assembly-CSharp]SkinController::stop()] : gg
-[Info][Found new Method Name] [[Assembly-CSharp]SkinController::pause()] : gh
-[Info][Found new Method Name] [[Assembly-CSharp]SkinController::playAddition()] : gi
-[Info][Found new Method Name] [[Assembly-CSharp]SkinController::stopAddition()] : gj
-[Info][Found new Method Name] [[Assembly-CSharp]SkinController::pauseAddition()] : gk
-[Info][Found new Method Name] [[Assembly-CSharp]SkinController::previewSkinCoroutine([UnityEngine.CoreModule]UnityEngine.Sprite [UnityEngine.CoreModule]UnityEngine.Sprite [Assembly-CSharp]ProductAddition)] : gl
-[Info][Found new Method Name] [[Assembly-CSharp]SkinController::stopPreviewSkinCoroutine()] : gm
-[Info][Found new Method Name] [[Assembly-CSharp]TeachingController/<spawnPlatformsWithState>d__18::System.Collections.Generic.IEnumerator<System.Object>.get_Current()] : gn
-[Info][Found new Method Name] [[Assembly-CSharp]TeachingController/<>c::<teachCoroutine>b__19_1()] : go
-[Info][Found new Method Name] [[Assembly-CSharp]TeachingController/<>c::<teachCoroutine>b__19_4()] : gp
-[Info][Found new Method Name] [[Assembly-CSharp]TeachingController/<>c::<teachCoroutine>b__19_7()] : gq
-[Info][Found new Method Name] [[Assembly-CSharp]TeachingController/<>c::<teachCoroutine>b__19_9()] : gr
-[Info][Found new Method Name] [[Assembly-CSharp]TeachingController/<teachCoroutine>d__19::System.Collections.Generic.IEnumerator<System.Object>.get_Current()] : gs
-[Info][Found new Method Name] [[Assembly-CSharp]TeachingController::setTextMessage([mscorlib]System.String)] : gt
-[Info][Found new Method Name] [[Assembly-CSharp]TeachingController::spawnPlatformsWithState()] : gu
-[Info][Found new Method Name] [[Assembly-CSharp]TeachingController::teachCoroutine()] : gv
-[Info][Found new Method Name] [[Assembly-CSharp]TeachingController::endOfTeaching()] : gw
-[Info][Found new Method Name] [[Assembly-CSharp]TeachingController::<spawnPlatformsWithState>b__18_0()] : gx
-[Info][Found new Method Name] [[Assembly-CSharp]TeachingController::<spawnPlatformsWithState>b__18_1()] : gy
-[Info][Found new Method Name] [[Assembly-CSharp]TeachingController::<teachCoroutine>b__19_0()] : gz
-[Info][Found new Method Name] [[Assembly-CSharp]TeachingController::<teachCoroutine>b__19_2()] : ha
-[Info][Found new Method Name] [[Assembly-CSharp]TeachingController::<teachCoroutine>b__19_3()] : hb
-[Info][Found new Method Name] [[Assembly-CSharp]TeachingController::<teachCoroutine>b__19_5()] : hc
-[Info][Found new Method Name] [[Assembly-CSharp]TeachingController::<teachCoroutine>b__19_6()] : hd
-[Info][Found new Method Name] [[Assembly-CSharp]TeachingController::<teachCoroutine>b__19_8()] : he
-[Info][Found new Method Name] [[Assembly-CSharp]TeachingController::<teachCoroutine>b__19_10()] : hf
-[Info][Found new Method Name] [[Assembly-CSharp]TextDeterminant::setAllTexts()] : hg
-[Info][Found new Method Name] [[Assembly-CSharp]TimeCounter::addOneGamesCounter()] : hh
-[Info][Found new Method Name] [[Assembly-CSharp]TimeCounter::saveTimeInGame()] : hi
-[Info][Found new Method Name] [[Assembly-CSharp]TrianglesController::play()] : hj
-[Info][Found new Method Name] [[Assembly-CSharp]TrianglesController::stop()] : hk
-[Info][Found new Method Name] [[Assembly-CSharp]TrianglesController::pause()] : hl
-[Info][Found new Method Name] [[Assembly-CSharp]TrianglesController::setAllTrianglesNotShow()] : hm
-[Info][Found new Method Name] [[Assembly-CSharp]TrianglesController::getBackgroundTrianglesList()] : hn
+[Info][Found new Method Name] [[Assembly-CSharp]ShopController/<buyButtonNoMoney>d__18::System.Collections.Generic.IEnumerator<System.Object>.get_Current()] : fm
+[Info][Found new Method Name] [[Assembly-CSharp]ShopController::PurchaseManager_OnPurchaseConsumable([UnityEngine.Purchasing]UnityEngine.Purchasing.PurchaseEventArgs)] : fn
+[Info][Found new Method Name] [[Assembly-CSharp]ShopController::PurchaseManager_OnPurchaseNonConsumable([UnityEngine.Purchasing]UnityEngine.Purchasing.PurchaseEventArgs)] : fo
+[Info][Found new Method Name] [[Assembly-CSharp]ShopController::findProduct([mscorlib]System.Int32 [Assembly-CSharp]ShopProductType)] : fp
+[Info][Found new Method Name] [[Assembly-CSharp]ShopController::findPurchaseProduct([mscorlib]System.Int32 [Assembly-CSharp]ShopProductType)] : fq
+[Info][Found new Method Name] [[Assembly-CSharp]ShopController::initializeProducts()] : fr
+[Info][Found new Method Name] [[Assembly-CSharp]ShopController::updateProductButtonsText()] : fs
+[Info][Found new Method Name] [[Assembly-CSharp]ShopController::buyProduct([Assembly-CSharp]ProductController)] : ft
+[Info][Found new Method Name] [[Assembly-CSharp]ShopController::selectProduct([Assembly-CSharp]ProductController)] : fu
+[Info][Found new Method Name] [[Assembly-CSharp]ShopController::previewProduct([Assembly-CSharp]ProductController)] : fv
+[Info][Found new Method Name] [[Assembly-CSharp]ShopController::updateMoneyText()] : fw
+[Info][Found new Method Name] [[Assembly-CSharp]ShopController::buyButtonNoMoney([Assembly-CSharp]ProductController)] : fx
+[Info][Found new Method Name] [[Assembly-CSharp]SkinBassDetectorController::play()] : fy
+[Info][Found new Method Name] [[Assembly-CSharp]SkinBassDetectorController::stop()] : fz
+[Info][Found new Method Name] [[Assembly-CSharp]SkinBassDetectorController::pause()] : ga
+[Info][Found new Method Name] [[Assembly-CSharp]SkinController/<>c::<previewSkinCoroutine>b__26_0()] : gb
+[Info][Found new Method Name] [[Assembly-CSharp]SkinController/<previewSkinCoroutine>d__26::System.Collections.Generic.IEnumerator<System.Object>.get_Current()] : gc
+[Info][Found new Method Name] [[Assembly-CSharp]SkinController/<stopPreviewSkinCoroutine>d__27::System.Collections.Generic.IEnumerator<System.Object>.get_Current()] : gd
+[Info][Found new Method Name] [[Assembly-CSharp]SkinController::setCurrentSkin([mscorlib]System.Int32 [UnityEngine.CoreModule]UnityEngine.Sprite [UnityEngine.CoreModule]UnityEngine.Sprite [Assembly-CSharp]ProductAddition)] : ge
+[Info][Found new Method Name] [[Assembly-CSharp]SkinController::setSkinSprite([UnityEngine.CoreModule]UnityEngine.Sprite [UnityEngine.CoreModule]UnityEngine.Sprite)] : gf
+[Info][Found new Method Name] [[Assembly-CSharp]SkinController::previewSkin([UnityEngine.CoreModule]UnityEngine.Sprite [UnityEngine.CoreModule]UnityEngine.Sprite [Assembly-CSharp]ProductAddition)] : gg
+[Info][Found new Method Name] [[Assembly-CSharp]SkinController::play()] : gh
+[Info][Found new Method Name] [[Assembly-CSharp]SkinController::stop()] : gi
+[Info][Found new Method Name] [[Assembly-CSharp]SkinController::pause()] : gj
+[Info][Found new Method Name] [[Assembly-CSharp]SkinController::playAddition()] : gk
+[Info][Found new Method Name] [[Assembly-CSharp]SkinController::stopAddition()] : gl
+[Info][Found new Method Name] [[Assembly-CSharp]SkinController::pauseAddition()] : gm
+[Info][Found new Method Name] [[Assembly-CSharp]SkinController::previewSkinCoroutine([UnityEngine.CoreModule]UnityEngine.Sprite [UnityEngine.CoreModule]UnityEngine.Sprite [Assembly-CSharp]ProductAddition)] : gn
+[Info][Found new Method Name] [[Assembly-CSharp]SkinController::stopPreviewSkinCoroutine()] : go
+[Info][Found new Method Name] [[Assembly-CSharp]TeachingController/<spawnPlatformsWithState>d__18::System.Collections.Generic.IEnumerator<System.Object>.get_Current()] : gp
+[Info][Found new Method Name] [[Assembly-CSharp]TeachingController/<>c::<teachCoroutine>b__19_1()] : gq
+[Info][Found new Method Name] [[Assembly-CSharp]TeachingController/<>c::<teachCoroutine>b__19_4()] : gr
+[Info][Found new Method Name] [[Assembly-CSharp]TeachingController/<>c::<teachCoroutine>b__19_7()] : gs
+[Info][Found new Method Name] [[Assembly-CSharp]TeachingController/<>c::<teachCoroutine>b__19_9()] : gt
+[Info][Found new Method Name] [[Assembly-CSharp]TeachingController/<teachCoroutine>d__19::System.Collections.Generic.IEnumerator<System.Object>.get_Current()] : gu
+[Info][Found new Method Name] [[Assembly-CSharp]TeachingController::setTextMessage([mscorlib]System.String)] : gv
+[Info][Found new Method Name] [[Assembly-CSharp]TeachingController::spawnPlatformsWithState()] : gw
+[Info][Found new Method Name] [[Assembly-CSharp]TeachingController::teachCoroutine()] : gx
+[Info][Found new Method Name] [[Assembly-CSharp]TeachingController::endOfTeaching()] : gy
+[Info][Found new Method Name] [[Assembly-CSharp]TeachingController::<spawnPlatformsWithState>b__18_0()] : gz
+[Info][Found new Method Name] [[Assembly-CSharp]TeachingController::<spawnPlatformsWithState>b__18_1()] : ha
+[Info][Found new Method Name] [[Assembly-CSharp]TeachingController::<teachCoroutine>b__19_0()] : hb
+[Info][Found new Method Name] [[Assembly-CSharp]TeachingController::<teachCoroutine>b__19_2()] : hc
+[Info][Found new Method Name] [[Assembly-CSharp]TeachingController::<teachCoroutine>b__19_3()] : hd
+[Info][Found new Method Name] [[Assembly-CSharp]TeachingController::<teachCoroutine>b__19_5()] : he
+[Info][Found new Method Name] [[Assembly-CSharp]TeachingController::<teachCoroutine>b__19_6()] : hf
+[Info][Found new Method Name] [[Assembly-CSharp]TeachingController::<teachCoroutine>b__19_8()] : hg
+[Info][Found new Method Name] [[Assembly-CSharp]TeachingController::<teachCoroutine>b__19_10()] : hh
+[Info][Found new Method Name] [[Assembly-CSharp]TextDeterminant::setAllTexts()] : hi
+[Info][Found new Method Name] [[Assembly-CSharp]TimeCounter::addOneGamesCounter()] : hj
+[Info][Found new Method Name] [[Assembly-CSharp]TimeCounter::saveTimeInGame()] : hk
+[Info][Found new Method Name] [[Assembly-CSharp]TrianglesController::play()] : hl
+[Info][Found new Method Name] [[Assembly-CSharp]TrianglesController::stop()] : hm
+[Info][Found new Method Name] [[Assembly-CSharp]TrianglesController::pause()] : hn
+[Info][Found new Method Name] [[Assembly-CSharp]TrianglesController::setAllTrianglesNotShow()] : ho
+[Info][Found new Method Name] [[Assembly-CSharp]TrianglesController::getBackgroundTrianglesList()] : hp
 [Info][FindName] [Assembly-CSharp-firstpass] Find Method Names...
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]IAPDemo::OnTransactionsRestored([mscorlib]System.Boolean)] : ho
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]IAPDemo::OnDeferred([UnityEngine.Purchasing]UnityEngine.Purchasing.Product)] : hp
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]IAPDemo::InitUI([mscorlib]System.Collections.Generic.IEnumerable`1<[UnityEngine.Purchasing]UnityEngine.Purchasing.Product>)] : hq
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]IAPDemo::RestoreButtonClick()] : hr
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]IAPDemo::ClearProductUIs()] : hs
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]IAPDemo::AddProductUIs([UnityEngine.Purchasing]UnityEngine.Purchasing.Product[])] : ht
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]IAPDemo::UpdateProductUI([UnityEngine.Purchasing]UnityEngine.Purchasing.Product)] : hu
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]IAPDemo::UpdateProductPendingUI([UnityEngine.Purchasing]UnityEngine.Purchasing.Product [mscorlib]System.Int32)] : hv
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]IAPDemo::NeedRestoreButton()] : hw
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]IAPDemo::LogProductDefinitions()] : hx
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]IAPDemoProductUI::SetProduct([UnityEngine.Purchasing]UnityEngine.Purchasing.Product [mscorlib]System.Action`1<[mscorlib]System.String>)] : hy
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]IAPDemoProductUI::SetPendingTime([mscorlib]System.Int32)] : hz
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.CodelessIAPStoreListener::InitializePurchasing()] : ia
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.CodelessIAPStoreListener::get_Instance()] : ib
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.CodelessIAPStoreListener::CreateCodelessIAPStoreListenerInstance()] : ic
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.CodelessIAPStoreListener::get_StoreController()] : id
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.CodelessIAPStoreListener::get_ExtensionProvider()] : ie
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.CodelessIAPStoreListener::HasProductInCatalog([mscorlib]System.String)] : if
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.CodelessIAPStoreListener::GetProduct([mscorlib]System.String)] : ig
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.CodelessIAPStoreListener::AddButton([Assembly-CSharp-firstpass]UnityEngine.Purchasing.IAPButton)] : ih
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.CodelessIAPStoreListener::RemoveButton([Assembly-CSharp-firstpass]UnityEngine.Purchasing.IAPButton)] : ii
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.CodelessIAPStoreListener::AddListener([Assembly-CSharp-firstpass]UnityEngine.Purchasing.IAPListener)] : ij
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.CodelessIAPStoreListener::RemoveListener([Assembly-CSharp-firstpass]UnityEngine.Purchasing.IAPListener)] : ik
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.CodelessIAPStoreListener::InitiatePurchase([mscorlib]System.String)] : il
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.DemoInventory::Fulfill([mscorlib]System.String)] : im
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.IAPButton::PurchaseProduct()] : in
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.IAPButton::Restore()] : io
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.IAPButton::OnTransactionsRestored([mscorlib]System.Boolean)] : ip
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.IAPButton::ProcessPurchase([UnityEngine.Purchasing]UnityEngine.Purchasing.PurchaseEventArgs)] : iq
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.IAPButton::OnPurchaseFailed([UnityEngine.Purchasing]UnityEngine.Purchasing.Product [UnityEngine.Purchasing]UnityEngine.Purchasing.PurchaseFailureReason)] : ir
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.IAPButton::UpdateText()] : is
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.IAPConfigurationHelper::PopulateConfigurationBuilder([UnityEngine.Purchasing]UnityEngine.Purchasing.ConfigurationBuilder& [Stores]UnityEngine.Purchasing.ProductCatalog)] : it
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.IAPListener::ProcessPurchase([UnityEngine.Purchasing]UnityEngine.Purchasing.PurchaseEventArgs)] : iu
-[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.IAPListener::OnPurchaseFailed([UnityEngine.Purchasing]UnityEngine.Purchasing.Product [UnityEngine.Purchasing]UnityEngine.Purchasing.PurchaseFailureReason)] : iv
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]IAPDemo::OnTransactionsRestored([mscorlib]System.Boolean)] : hq
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]IAPDemo::OnDeferred([UnityEngine.Purchasing]UnityEngine.Purchasing.Product)] : hr
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]IAPDemo::InitUI([mscorlib]System.Collections.Generic.IEnumerable`1<[UnityEngine.Purchasing]UnityEngine.Purchasing.Product>)] : hs
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]IAPDemo::RestoreButtonClick()] : ht
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]IAPDemo::ClearProductUIs()] : hu
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]IAPDemo::AddProductUIs([UnityEngine.Purchasing]UnityEngine.Purchasing.Product[])] : hv
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]IAPDemo::UpdateProductUI([UnityEngine.Purchasing]UnityEngine.Purchasing.Product)] : hw
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]IAPDemo::UpdateProductPendingUI([UnityEngine.Purchasing]UnityEngine.Purchasing.Product [mscorlib]System.Int32)] : hx
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]IAPDemo::NeedRestoreButton()] : hy
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]IAPDemo::LogProductDefinitions()] : hz
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]IAPDemoProductUI::SetProduct([UnityEngine.Purchasing]UnityEngine.Purchasing.Product [mscorlib]System.Action`1<[mscorlib]System.String>)] : ia
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]IAPDemoProductUI::SetPendingTime([mscorlib]System.Int32)] : ib
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.CodelessIAPStoreListener::InitializePurchasing()] : ic
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.CodelessIAPStoreListener::get_Instance()] : id
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.CodelessIAPStoreListener::CreateCodelessIAPStoreListenerInstance()] : ie
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.CodelessIAPStoreListener::get_StoreController()] : if
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.CodelessIAPStoreListener::get_ExtensionProvider()] : ig
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.CodelessIAPStoreListener::HasProductInCatalog([mscorlib]System.String)] : ih
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.CodelessIAPStoreListener::GetProduct([mscorlib]System.String)] : ii
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.CodelessIAPStoreListener::AddButton([Assembly-CSharp-firstpass]UnityEngine.Purchasing.IAPButton)] : ij
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.CodelessIAPStoreListener::RemoveButton([Assembly-CSharp-firstpass]UnityEngine.Purchasing.IAPButton)] : ik
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.CodelessIAPStoreListener::AddListener([Assembly-CSharp-firstpass]UnityEngine.Purchasing.IAPListener)] : il
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.CodelessIAPStoreListener::RemoveListener([Assembly-CSharp-firstpass]UnityEngine.Purchasing.IAPListener)] : im
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.CodelessIAPStoreListener::InitiatePurchase([mscorlib]System.String)] : in
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.DemoInventory::Fulfill([mscorlib]System.String)] : io
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.IAPButton::PurchaseProduct()] : ip
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.IAPButton::Restore()] : iq
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.IAPButton::OnTransactionsRestored([mscorlib]System.Boolean)] : ir
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.IAPButton::ProcessPurchase([UnityEngine.Purchasing]UnityEngine.Purchasing.PurchaseEventArgs)] : is
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.IAPButton::OnPurchaseFailed([UnityEngine.Purchasing]UnityEngine.Purchasing.Product [UnityEngine.Purchasing]UnityEngine.Purchasing.PurchaseFailureReason)] : it
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.IAPButton::UpdateText()] : iu
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.IAPConfigurationHelper::PopulateConfigurationBuilder([UnityEngine.Purchasing]UnityEngine.Purchasing.ConfigurationBuilder& [Stores]UnityEngine.Purchasing.ProductCatalog)] : iv
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.IAPListener::ProcessPurchase([UnityEngine.Purchasing]UnityEngine.Purchasing.PurchaseEventArgs)] : iw
+[Info][Found new Method Name] [[Assembly-CSharp-firstpass]UnityEngine.Purchasing.IAPListener::OnPurchaseFailed([UnityEngine.Purchasing]UnityEngine.Purchasing.Product [UnityEngine.Purchasing]UnityEngine.Purchasing.PurchaseFailureReason)] : ix
 [Info][Process] Finished Step: Find obfuscated name for Methods
 [Info][Process] Processing Step: Find obfuscated name for Types
 [Info][FindName] [Assembly-CSharp] Find Type Names...
@@ -4487,9 +4517,9 @@ D:\Unity Projects\Color square\Library\PlayerScriptAssemblies\Assembly-CSharp-fi
 [Info][Found new Type Name] [[Assembly-CSharp]BlotSpawner/<startRideBlots>d__14] : a
 [Info][Found new Type Name] [[Assembly-CSharp]BlotSpawner/<stopRideBlots>d__15] : b
 [Info][Found new Type Name] [[Assembly-CSharp]BlotSpawner/<spawnCoroutine>d__16] : c
-[Info][Found new Type Name] [[Assembly-CSharp]ButtonsController/<playButtonCoroutine>d__51] : b
-[Info][Found new Type Name] [[Assembly-CSharp]ButtonsController/<menuButtonCoroutine>d__52] : c
-[Info][Found new Type Name] [[Assembly-CSharp]ButtonsController/<adButtonCoroutine>d__53] : d
+[Info][Found new Type Name] [[Assembly-CSharp]ButtonsController/<playButtonCoroutine>d__52] : b
+[Info][Found new Type Name] [[Assembly-CSharp]ButtonsController/<menuButtonCoroutine>d__53] : c
+[Info][Found new Type Name] [[Assembly-CSharp]ButtonsController/<adButtonCoroutine>d__54] : d
 [Info][Found new Type Name] [[Assembly-CSharp]CounterController/<newRecordShowCoroutine>d__10] : a
 [Info][Found new Type Name] [[Assembly-CSharp]FillingLineController/<moneyTextShowCoroutine>d__8] : a
 [Info][Found new Type Name] [[Assembly-CSharp]GooglePlayServices] : b
@@ -4505,6 +4535,7 @@ D:\Unity Projects\Color square\Library\PlayerScriptAssemblies\Assembly-CSharp-fi
 [Info][Found new Type Name] [[Assembly-CSharp]ShopProductType] : c
 [Info][Found new Type Name] [[Assembly-CSharp]ProductAddition] : d
 [Info][Found new Type Name] [[Assembly-CSharp]ShopController/<>c__DisplayClass12_0] : a
+[Info][Found new Type Name] [[Assembly-CSharp]ShopController/<buyButtonNoMoney>d__18] : b
 [Info][Found new Type Name] [[Assembly-CSharp]SkinController/<previewSkinCoroutine>d__26] : b
 [Info][Found new Type Name] [[Assembly-CSharp]SkinController/<stopPreviewSkinCoroutine>d__27] : c
 [Info][Found new Type Name] [[Assembly-CSharp]TeachingController/<spawnPlatformsWithState>d__18] : a
@@ -4573,16 +4604,16 @@ D:\Unity Projects\Color square\Library\PlayerScriptAssemblies\Assembly-CSharp-fi
 [Info][Rename Field] [BlotSpawner/<spawnCoroutine>d__16::<>1__state] to j
 [Info][Rename Field] [BlotSpawner/<spawnCoroutine>d__16::<>2__current] to k
 [Info][Rename Field] [BlotSpawner/<spawnCoroutine>d__16::<>4__this] to l
-[Info][Rename Field] [ButtonsController/<playButtonCoroutine>d__51::<>1__state] to j
-[Info][Rename Field] [ButtonsController/<playButtonCoroutine>d__51::<>2__current] to k
-[Info][Rename Field] [ButtonsController/<playButtonCoroutine>d__51::isStartAwake] to y
-[Info][Rename Field] [ButtonsController/<playButtonCoroutine>d__51::<>4__this] to l
-[Info][Rename Field] [ButtonsController/<menuButtonCoroutine>d__52::<>1__state] to j
-[Info][Rename Field] [ButtonsController/<menuButtonCoroutine>d__52::<>2__current] to k
-[Info][Rename Field] [ButtonsController/<menuButtonCoroutine>d__52::<>4__this] to l
-[Info][Rename Field] [ButtonsController/<adButtonCoroutine>d__53::<>1__state] to j
-[Info][Rename Field] [ButtonsController/<adButtonCoroutine>d__53::<>2__current] to k
-[Info][Rename Field] [ButtonsController/<adButtonCoroutine>d__53::<>4__this] to l
+[Info][Rename Field] [ButtonsController/<playButtonCoroutine>d__52::<>1__state] to j
+[Info][Rename Field] [ButtonsController/<playButtonCoroutine>d__52::<>2__current] to k
+[Info][Rename Field] [ButtonsController/<playButtonCoroutine>d__52::isStartAwake] to y
+[Info][Rename Field] [ButtonsController/<playButtonCoroutine>d__52::<>4__this] to l
+[Info][Rename Field] [ButtonsController/<menuButtonCoroutine>d__53::<>1__state] to j
+[Info][Rename Field] [ButtonsController/<menuButtonCoroutine>d__53::<>2__current] to k
+[Info][Rename Field] [ButtonsController/<menuButtonCoroutine>d__53::<>4__this] to l
+[Info][Rename Field] [ButtonsController/<adButtonCoroutine>d__54::<>1__state] to j
+[Info][Rename Field] [ButtonsController/<adButtonCoroutine>d__54::<>2__current] to k
+[Info][Rename Field] [ButtonsController/<adButtonCoroutine>d__54::<>4__this] to l
 [Info][Rename Field] [CameraScaling::componentCamera] to z
 [Info][Rename Field] [CameraScaling::initialSize] to ba
 [Info][Rename Field] [CameraScaling::targetAspect] to bb
@@ -4644,6 +4675,9 @@ D:\Unity Projects\Color square\Library\PlayerScriptAssemblies\Assembly-CSharp-fi
 [Info][Rename Field] [ProductAddition::detector] to cf
 [Info][Rename Field] [ShopController/<>c__DisplayClass12_0::product] to cg
 [Info][Rename Field] [ShopController/<>c__DisplayClass12_0::<>4__this] to l
+[Info][Rename Field] [ShopController/<buyButtonNoMoney>d__18::<>1__state] to j
+[Info][Rename Field] [ShopController/<buyButtonNoMoney>d__18::<>2__current] to k
+[Info][Rename Field] [ShopController/<buyButtonNoMoney>d__18::product] to cg
 [Info][Rename Field] [SkinController/<previewSkinCoroutine>d__26::<>1__state] to j
 [Info][Rename Field] [SkinController/<previewSkinCoroutine>d__26::<>2__current] to k
 [Info][Rename Field] [SkinController/<previewSkinCoroutine>d__26::<>4__this] to l
@@ -4704,12 +4738,12 @@ D:\Unity Projects\Color square\Library\PlayerScriptAssemblies\Assembly-CSharp-fi
 [Info][Rename Property] [BlotSpawner/<stopRideBlots>d__15::System.Collections.IEnumerator.Current] to b
 [Info][Rename Property] [BlotSpawner/<spawnCoroutine>d__16::System.Collections.Generic.IEnumerator<System.Object>.Current] to a
 [Info][Rename Property] [BlotSpawner/<spawnCoroutine>d__16::System.Collections.IEnumerator.Current] to b
-[Info][Rename Property] [ButtonsController/<playButtonCoroutine>d__51::System.Collections.Generic.IEnumerator<System.Object>.Current] to a
-[Info][Rename Property] [ButtonsController/<playButtonCoroutine>d__51::System.Collections.IEnumerator.Current] to b
-[Info][Rename Property] [ButtonsController/<menuButtonCoroutine>d__52::System.Collections.Generic.IEnumerator<System.Object>.Current] to a
-[Info][Rename Property] [ButtonsController/<menuButtonCoroutine>d__52::System.Collections.IEnumerator.Current] to b
-[Info][Rename Property] [ButtonsController/<adButtonCoroutine>d__53::System.Collections.Generic.IEnumerator<System.Object>.Current] to a
-[Info][Rename Property] [ButtonsController/<adButtonCoroutine>d__53::System.Collections.IEnumerator.Current] to b
+[Info][Rename Property] [ButtonsController/<playButtonCoroutine>d__52::System.Collections.Generic.IEnumerator<System.Object>.Current] to a
+[Info][Rename Property] [ButtonsController/<playButtonCoroutine>d__52::System.Collections.IEnumerator.Current] to b
+[Info][Rename Property] [ButtonsController/<menuButtonCoroutine>d__53::System.Collections.Generic.IEnumerator<System.Object>.Current] to a
+[Info][Rename Property] [ButtonsController/<menuButtonCoroutine>d__53::System.Collections.IEnumerator.Current] to b
+[Info][Rename Property] [ButtonsController/<adButtonCoroutine>d__54::System.Collections.Generic.IEnumerator<System.Object>.Current] to a
+[Info][Rename Property] [ButtonsController/<adButtonCoroutine>d__54::System.Collections.IEnumerator.Current] to b
 [Info][Rename Property] [CounterController/<newRecordShowCoroutine>d__10::System.Collections.Generic.IEnumerator<System.Object>.Current] to a
 [Info][Rename Property] [CounterController/<newRecordShowCoroutine>d__10::System.Collections.IEnumerator.Current] to b
 [Info][Rename Property] [FillingLineController/<moneyTextShowCoroutine>d__8::System.Collections.Generic.IEnumerator<System.Object>.Current] to a
@@ -4730,6 +4764,8 @@ D:\Unity Projects\Color square\Library\PlayerScriptAssemblies\Assembly-CSharp-fi
 [Info][Rename Event] [PurchaseManager::OnPurchaseConsumable] to bx
 [Info][Rename Event] [PurchaseManager::OnPurchaseNonConsumable] to by
 [Info][Rename Event] [PurchaseManager::PurchaseFailed] to bz
+[Info][Rename Property] [ShopController/<buyButtonNoMoney>d__18::System.Collections.Generic.IEnumerator<System.Object>.Current] to a
+[Info][Rename Property] [ShopController/<buyButtonNoMoney>d__18::System.Collections.IEnumerator.Current] to b
 [Info][Rename Property] [SkinController/<previewSkinCoroutine>d__26::System.Collections.Generic.IEnumerator<System.Object>.Current] to a
 [Info][Rename Property] [SkinController/<previewSkinCoroutine>d__26::System.Collections.IEnumerator.Current] to b
 [Info][Rename Property] [SkinController/<stopPreviewSkinCoroutine>d__27::System.Collections.Generic.IEnumerator<System.Object>.Current] to a
@@ -4794,11 +4830,11 @@ D:\Unity Projects\Color square\Library\PlayerScriptAssemblies\Assembly-CSharp-fi
 [Info][Rename Method] [BlotSpawner::stopRideBlots] to bu
 [Info][Rename Method] [BlotSpawner::spawnCoroutine] to bv
 [Info][Rename Method] [BlotSpawner::spawnRandomBlot] to bw
-[Info][Rename Method] [ButtonsController/<>c::<playButtonCoroutine>b__51_0] to bx
-[Info][Rename Method] [ButtonsController/<>c::<adButtonCoroutine>b__53_0] to by
-[Info][Rename Method] [ButtonsController/<playButtonCoroutine>d__51::System.Collections.Generic.IEnumerator<System.Object>.get_Current] to bz
-[Info][Rename Method] [ButtonsController/<menuButtonCoroutine>d__52::System.Collections.Generic.IEnumerator<System.Object>.get_Current] to ca
-[Info][Rename Method] [ButtonsController/<adButtonCoroutine>d__53::System.Collections.Generic.IEnumerator<System.Object>.get_Current] to cb
+[Info][Rename Method] [ButtonsController/<>c::<playButtonCoroutine>b__52_0] to bx
+[Info][Rename Method] [ButtonsController/<>c::<adButtonCoroutine>b__54_0] to by
+[Info][Rename Method] [ButtonsController/<playButtonCoroutine>d__52::System.Collections.Generic.IEnumerator<System.Object>.get_Current] to bz
+[Info][Rename Method] [ButtonsController/<menuButtonCoroutine>d__53::System.Collections.Generic.IEnumerator<System.Object>.get_Current] to ca
+[Info][Rename Method] [ButtonsController/<adButtonCoroutine>d__54::System.Collections.Generic.IEnumerator<System.Object>.get_Current] to cb
 [Info][Rename Method] [ButtonsController::invokeOnClickShopButton] to cc
 [Info][Rename Method] [ButtonsController::playButtonCoroutine] to cd
 [Info][Rename Method] [ButtonsController::menuButtonCoroutine] to ce
@@ -4887,95 +4923,97 @@ D:\Unity Projects\Color square\Library\PlayerScriptAssemblies\Assembly-CSharp-fi
 [Info][Rename Method] [ShopController/<>c__DisplayClass12_0::<initializeProducts>b__0] to fj
 [Info][Rename Method] [ShopController/<>c__DisplayClass12_0::<initializeProducts>b__1] to fk
 [Info][Rename Method] [ShopController/<>c__DisplayClass12_0::<initializeProducts>b__2] to fl
-[Info][Rename Method] [ShopController::PurchaseManager_OnPurchaseConsumable] to fm
-[Info][Rename Method] [ShopController::PurchaseManager_OnPurchaseNonConsumable] to fn
-[Info][Rename Method] [ShopController::findProduct] to fo
-[Info][Rename Method] [ShopController::findPurchaseProduct] to fp
-[Info][Rename Method] [ShopController::initializeProducts] to fq
-[Info][Rename Method] [ShopController::updateProductButtonsText] to fr
-[Info][Rename Method] [ShopController::buyProduct] to fs
-[Info][Rename Method] [ShopController::selectProduct] to ft
-[Info][Rename Method] [ShopController::previewProduct] to fu
-[Info][Rename Method] [ShopController::updateMoneyText] to fv
-[Info][Rename Method] [SkinBassDetectorController::play] to fw
-[Info][Rename Method] [SkinBassDetectorController::stop] to fx
-[Info][Rename Method] [SkinBassDetectorController::pause] to fy
-[Info][Rename Method] [SkinController/<>c::<previewSkinCoroutine>b__26_0] to fz
-[Info][Rename Method] [SkinController/<previewSkinCoroutine>d__26::System.Collections.Generic.IEnumerator<System.Object>.get_Current] to ga
-[Info][Rename Method] [SkinController/<stopPreviewSkinCoroutine>d__27::System.Collections.Generic.IEnumerator<System.Object>.get_Current] to gb
-[Info][Rename Method] [SkinController::setCurrentSkin] to gc
-[Info][Rename Method] [SkinController::setSkinSprite] to gd
-[Info][Rename Method] [SkinController::previewSkin] to ge
-[Info][Rename Method] [SkinController::play] to gf
-[Info][Rename Method] [SkinController::stop] to gg
-[Info][Rename Method] [SkinController::pause] to gh
-[Info][Rename Method] [SkinController::playAddition] to gi
-[Info][Rename Method] [SkinController::stopAddition] to gj
-[Info][Rename Method] [SkinController::pauseAddition] to gk
-[Info][Rename Method] [SkinController::previewSkinCoroutine] to gl
-[Info][Rename Method] [SkinController::stopPreviewSkinCoroutine] to gm
-[Info][Rename Method] [TeachingController/<spawnPlatformsWithState>d__18::System.Collections.Generic.IEnumerator<System.Object>.get_Current] to gn
-[Info][Rename Method] [TeachingController/<>c::<teachCoroutine>b__19_1] to go
-[Info][Rename Method] [TeachingController/<>c::<teachCoroutine>b__19_4] to gp
-[Info][Rename Method] [TeachingController/<>c::<teachCoroutine>b__19_7] to gq
-[Info][Rename Method] [TeachingController/<>c::<teachCoroutine>b__19_9] to gr
-[Info][Rename Method] [TeachingController/<teachCoroutine>d__19::System.Collections.Generic.IEnumerator<System.Object>.get_Current] to gs
-[Info][Rename Method] [TeachingController::setTextMessage] to gt
-[Info][Rename Method] [TeachingController::spawnPlatformsWithState] to gu
-[Info][Rename Method] [TeachingController::teachCoroutine] to gv
-[Info][Rename Method] [TeachingController::endOfTeaching] to gw
-[Info][Rename Method] [TeachingController::<spawnPlatformsWithState>b__18_0] to gx
-[Info][Rename Method] [TeachingController::<spawnPlatformsWithState>b__18_1] to gy
-[Info][Rename Method] [TeachingController::<teachCoroutine>b__19_0] to gz
-[Info][Rename Method] [TeachingController::<teachCoroutine>b__19_2] to ha
-[Info][Rename Method] [TeachingController::<teachCoroutine>b__19_3] to hb
-[Info][Rename Method] [TeachingController::<teachCoroutine>b__19_5] to hc
-[Info][Rename Method] [TeachingController::<teachCoroutine>b__19_6] to hd
-[Info][Rename Method] [TeachingController::<teachCoroutine>b__19_8] to he
-[Info][Rename Method] [TeachingController::<teachCoroutine>b__19_10] to hf
-[Info][Rename Method] [TextDeterminant::setAllTexts] to hg
-[Info][Rename Method] [TimeCounter::addOneGamesCounter] to hh
-[Info][Rename Method] [TimeCounter::saveTimeInGame] to hi
-[Info][Rename Method] [TrianglesController::play] to hj
-[Info][Rename Method] [TrianglesController::stop] to hk
-[Info][Rename Method] [TrianglesController::pause] to hl
-[Info][Rename Method] [TrianglesController::setAllTrianglesNotShow] to hm
-[Info][Rename Method] [TrianglesController::getBackgroundTrianglesList] to hn
+[Info][Rename Method] [ShopController/<buyButtonNoMoney>d__18::System.Collections.Generic.IEnumerator<System.Object>.get_Current] to fm
+[Info][Rename Method] [ShopController::PurchaseManager_OnPurchaseConsumable] to fn
+[Info][Rename Method] [ShopController::PurchaseManager_OnPurchaseNonConsumable] to fo
+[Info][Rename Method] [ShopController::findProduct] to fp
+[Info][Rename Method] [ShopController::findPurchaseProduct] to fq
+[Info][Rename Method] [ShopController::initializeProducts] to fr
+[Info][Rename Method] [ShopController::updateProductButtonsText] to fs
+[Info][Rename Method] [ShopController::buyProduct] to ft
+[Info][Rename Method] [ShopController::selectProduct] to fu
+[Info][Rename Method] [ShopController::previewProduct] to fv
+[Info][Rename Method] [ShopController::updateMoneyText] to fw
+[Info][Rename Method] [ShopController::buyButtonNoMoney] to fx
+[Info][Rename Method] [SkinBassDetectorController::play] to fy
+[Info][Rename Method] [SkinBassDetectorController::stop] to fz
+[Info][Rename Method] [SkinBassDetectorController::pause] to ga
+[Info][Rename Method] [SkinController/<>c::<previewSkinCoroutine>b__26_0] to gb
+[Info][Rename Method] [SkinController/<previewSkinCoroutine>d__26::System.Collections.Generic.IEnumerator<System.Object>.get_Current] to gc
+[Info][Rename Method] [SkinController/<stopPreviewSkinCoroutine>d__27::System.Collections.Generic.IEnumerator<System.Object>.get_Current] to gd
+[Info][Rename Method] [SkinController::setCurrentSkin] to ge
+[Info][Rename Method] [SkinController::setSkinSprite] to gf
+[Info][Rename Method] [SkinController::previewSkin] to gg
+[Info][Rename Method] [SkinController::play] to gh
+[Info][Rename Method] [SkinController::stop] to gi
+[Info][Rename Method] [SkinController::pause] to gj
+[Info][Rename Method] [SkinController::playAddition] to gk
+[Info][Rename Method] [SkinController::stopAddition] to gl
+[Info][Rename Method] [SkinController::pauseAddition] to gm
+[Info][Rename Method] [SkinController::previewSkinCoroutine] to gn
+[Info][Rename Method] [SkinController::stopPreviewSkinCoroutine] to go
+[Info][Rename Method] [TeachingController/<spawnPlatformsWithState>d__18::System.Collections.Generic.IEnumerator<System.Object>.get_Current] to gp
+[Info][Rename Method] [TeachingController/<>c::<teachCoroutine>b__19_1] to gq
+[Info][Rename Method] [TeachingController/<>c::<teachCoroutine>b__19_4] to gr
+[Info][Rename Method] [TeachingController/<>c::<teachCoroutine>b__19_7] to gs
+[Info][Rename Method] [TeachingController/<>c::<teachCoroutine>b__19_9] to gt
+[Info][Rename Method] [TeachingController/<teachCoroutine>d__19::System.Collections.Generic.IEnumerator<System.Object>.get_Current] to gu
+[Info][Rename Method] [TeachingController::setTextMessage] to gv
+[Info][Rename Method] [TeachingController::spawnPlatformsWithState] to gw
+[Info][Rename Method] [TeachingController::teachCoroutine] to gx
+[Info][Rename Method] [TeachingController::endOfTeaching] to gy
+[Info][Rename Method] [TeachingController::<spawnPlatformsWithState>b__18_0] to gz
+[Info][Rename Method] [TeachingController::<spawnPlatformsWithState>b__18_1] to ha
+[Info][Rename Method] [TeachingController::<teachCoroutine>b__19_0] to hb
+[Info][Rename Method] [TeachingController::<teachCoroutine>b__19_2] to hc
+[Info][Rename Method] [TeachingController::<teachCoroutine>b__19_3] to hd
+[Info][Rename Method] [TeachingController::<teachCoroutine>b__19_5] to he
+[Info][Rename Method] [TeachingController::<teachCoroutine>b__19_6] to hf
+[Info][Rename Method] [TeachingController::<teachCoroutine>b__19_8] to hg
+[Info][Rename Method] [TeachingController::<teachCoroutine>b__19_10] to hh
+[Info][Rename Method] [TextDeterminant::setAllTexts] to hi
+[Info][Rename Method] [TimeCounter::addOneGamesCounter] to hj
+[Info][Rename Method] [TimeCounter::saveTimeInGame] to hk
+[Info][Rename Method] [TrianglesController::play] to hl
+[Info][Rename Method] [TrianglesController::stop] to hm
+[Info][Rename Method] [TrianglesController::pause] to hn
+[Info][Rename Method] [TrianglesController::setAllTrianglesNotShow] to ho
+[Info][Rename Method] [TrianglesController::getBackgroundTrianglesList] to hp
 [Info][Rename] [Assembly-CSharp-firstpass] Rename Methods...
-[Info][Rename Method] [IAPDemo::OnTransactionsRestored] to ho
-[Info][Rename Method] [IAPDemo::OnDeferred] to hp
-[Info][Rename Method] [IAPDemo::InitUI] to hq
-[Info][Rename Method] [IAPDemo::RestoreButtonClick] to hr
-[Info][Rename Method] [IAPDemo::ClearProductUIs] to hs
-[Info][Rename Method] [IAPDemo::AddProductUIs] to ht
-[Info][Rename Method] [IAPDemo::UpdateProductUI] to hu
-[Info][Rename Method] [IAPDemo::UpdateProductPendingUI] to hv
-[Info][Rename Method] [IAPDemo::NeedRestoreButton] to hw
-[Info][Rename Method] [IAPDemo::LogProductDefinitions] to hx
-[Info][Rename Method] [IAPDemoProductUI::SetProduct] to hy
-[Info][Rename Method] [IAPDemoProductUI::SetPendingTime] to hz
-[Info][Rename Method] [UnityEngine.Purchasing.CodelessIAPStoreListener::InitializePurchasing] to ia
-[Info][Rename Method] [UnityEngine.Purchasing.CodelessIAPStoreListener::get_Instance] to ib
-[Info][Rename Method] [UnityEngine.Purchasing.CodelessIAPStoreListener::CreateCodelessIAPStoreListenerInstance] to ic
-[Info][Rename Method] [UnityEngine.Purchasing.CodelessIAPStoreListener::get_StoreController] to id
-[Info][Rename Method] [UnityEngine.Purchasing.CodelessIAPStoreListener::get_ExtensionProvider] to ie
-[Info][Rename Method] [UnityEngine.Purchasing.CodelessIAPStoreListener::HasProductInCatalog] to if
-[Info][Rename Method] [UnityEngine.Purchasing.CodelessIAPStoreListener::GetProduct] to ig
-[Info][Rename Method] [UnityEngine.Purchasing.CodelessIAPStoreListener::AddButton] to ih
-[Info][Rename Method] [UnityEngine.Purchasing.CodelessIAPStoreListener::RemoveButton] to ii
-[Info][Rename Method] [UnityEngine.Purchasing.CodelessIAPStoreListener::AddListener] to ij
-[Info][Rename Method] [UnityEngine.Purchasing.CodelessIAPStoreListener::RemoveListener] to ik
-[Info][Rename Method] [UnityEngine.Purchasing.CodelessIAPStoreListener::InitiatePurchase] to il
-[Info][Rename Method] [UnityEngine.Purchasing.DemoInventory::Fulfill] to im
-[Info][Rename Method] [UnityEngine.Purchasing.IAPButton::PurchaseProduct] to in
-[Info][Rename Method] [UnityEngine.Purchasing.IAPButton::Restore] to io
-[Info][Rename Method] [UnityEngine.Purchasing.IAPButton::OnTransactionsRestored] to ip
-[Info][Rename Method] [UnityEngine.Purchasing.IAPButton::ProcessPurchase] to iq
-[Info][Rename Method] [UnityEngine.Purchasing.IAPButton::OnPurchaseFailed] to ir
-[Info][Rename Method] [UnityEngine.Purchasing.IAPButton::UpdateText] to is
-[Info][Rename Method] [UnityEngine.Purchasing.IAPConfigurationHelper::PopulateConfigurationBuilder] to it
-[Info][Rename Method] [UnityEngine.Purchasing.IAPListener::ProcessPurchase] to iu
-[Info][Rename Method] [UnityEngine.Purchasing.IAPListener::OnPurchaseFailed] to iv
+[Info][Rename Method] [IAPDemo::OnTransactionsRestored] to hq
+[Info][Rename Method] [IAPDemo::OnDeferred] to hr
+[Info][Rename Method] [IAPDemo::InitUI] to hs
+[Info][Rename Method] [IAPDemo::RestoreButtonClick] to ht
+[Info][Rename Method] [IAPDemo::ClearProductUIs] to hu
+[Info][Rename Method] [IAPDemo::AddProductUIs] to hv
+[Info][Rename Method] [IAPDemo::UpdateProductUI] to hw
+[Info][Rename Method] [IAPDemo::UpdateProductPendingUI] to hx
+[Info][Rename Method] [IAPDemo::NeedRestoreButton] to hy
+[Info][Rename Method] [IAPDemo::LogProductDefinitions] to hz
+[Info][Rename Method] [IAPDemoProductUI::SetProduct] to ia
+[Info][Rename Method] [IAPDemoProductUI::SetPendingTime] to ib
+[Info][Rename Method] [UnityEngine.Purchasing.CodelessIAPStoreListener::InitializePurchasing] to ic
+[Info][Rename Method] [UnityEngine.Purchasing.CodelessIAPStoreListener::get_Instance] to id
+[Info][Rename Method] [UnityEngine.Purchasing.CodelessIAPStoreListener::CreateCodelessIAPStoreListenerInstance] to ie
+[Info][Rename Method] [UnityEngine.Purchasing.CodelessIAPStoreListener::get_StoreController] to if
+[Info][Rename Method] [UnityEngine.Purchasing.CodelessIAPStoreListener::get_ExtensionProvider] to ig
+[Info][Rename Method] [UnityEngine.Purchasing.CodelessIAPStoreListener::HasProductInCatalog] to ih
+[Info][Rename Method] [UnityEngine.Purchasing.CodelessIAPStoreListener::GetProduct] to ii
+[Info][Rename Method] [UnityEngine.Purchasing.CodelessIAPStoreListener::AddButton] to ij
+[Info][Rename Method] [UnityEngine.Purchasing.CodelessIAPStoreListener::RemoveButton] to ik
+[Info][Rename Method] [UnityEngine.Purchasing.CodelessIAPStoreListener::AddListener] to il
+[Info][Rename Method] [UnityEngine.Purchasing.CodelessIAPStoreListener::RemoveListener] to im
+[Info][Rename Method] [UnityEngine.Purchasing.CodelessIAPStoreListener::InitiatePurchase] to in
+[Info][Rename Method] [UnityEngine.Purchasing.DemoInventory::Fulfill] to io
+[Info][Rename Method] [UnityEngine.Purchasing.IAPButton::PurchaseProduct] to ip
+[Info][Rename Method] [UnityEngine.Purchasing.IAPButton::Restore] to iq
+[Info][Rename Method] [UnityEngine.Purchasing.IAPButton::OnTransactionsRestored] to ir
+[Info][Rename Method] [UnityEngine.Purchasing.IAPButton::ProcessPurchase] to is
+[Info][Rename Method] [UnityEngine.Purchasing.IAPButton::OnPurchaseFailed] to it
+[Info][Rename Method] [UnityEngine.Purchasing.IAPButton::UpdateText] to iu
+[Info][Rename Method] [UnityEngine.Purchasing.IAPConfigurationHelper::PopulateConfigurationBuilder] to iv
+[Info][Rename Method] [UnityEngine.Purchasing.IAPListener::ProcessPurchase] to iw
+[Info][Rename Method] [UnityEngine.Purchasing.IAPListener::OnPurchaseFailed] to ix
 [Info][Process] Finished Step: Rename Methods
 [Info][Process] Processing Step: Rename Types and Namespaces
 [Info][Rename] [Assembly-CSharp] Rename Type Names and Namespaces...
@@ -5007,15 +5045,15 @@ D:\Unity Projects\Color square\Library\PlayerScriptAssemblies\Assembly-CSharp-fi
 [Info][Update Reference Type] [BlotSpawner/<spawnCoroutine>d__16]
 [Info][Rename Reference] [[Assembly-CSharp]BlotSpawner/<spawnCoroutine>d__16] Name: <spawnCoroutine>d__16
 [Info][Rename Type] [BlotSpawner/<spawnCoroutine>d__16] to c
-[Info][Update Reference Type] [ButtonsController/<playButtonCoroutine>d__51]
-[Info][Rename Reference] [[Assembly-CSharp]ButtonsController/<playButtonCoroutine>d__51] Name: <playButtonCoroutine>d__51
-[Info][Rename Type] [ButtonsController/<playButtonCoroutine>d__51] to b
-[Info][Update Reference Type] [ButtonsController/<menuButtonCoroutine>d__52]
-[Info][Rename Reference] [[Assembly-CSharp]ButtonsController/<menuButtonCoroutine>d__52] Name: <menuButtonCoroutine>d__52
-[Info][Rename Type] [ButtonsController/<menuButtonCoroutine>d__52] to c
-[Info][Update Reference Type] [ButtonsController/<adButtonCoroutine>d__53]
-[Info][Rename Reference] [[Assembly-CSharp]ButtonsController/<adButtonCoroutine>d__53] Name: <adButtonCoroutine>d__53
-[Info][Rename Type] [ButtonsController/<adButtonCoroutine>d__53] to d
+[Info][Update Reference Type] [ButtonsController/<playButtonCoroutine>d__52]
+[Info][Rename Reference] [[Assembly-CSharp]ButtonsController/<playButtonCoroutine>d__52] Name: <playButtonCoroutine>d__52
+[Info][Rename Type] [ButtonsController/<playButtonCoroutine>d__52] to b
+[Info][Update Reference Type] [ButtonsController/<menuButtonCoroutine>d__53]
+[Info][Rename Reference] [[Assembly-CSharp]ButtonsController/<menuButtonCoroutine>d__53] Name: <menuButtonCoroutine>d__53
+[Info][Rename Type] [ButtonsController/<menuButtonCoroutine>d__53] to c
+[Info][Update Reference Type] [ButtonsController/<adButtonCoroutine>d__54]
+[Info][Rename Reference] [[Assembly-CSharp]ButtonsController/<adButtonCoroutine>d__54] Name: <adButtonCoroutine>d__54
+[Info][Rename Type] [ButtonsController/<adButtonCoroutine>d__54] to d
 [Info][Update Reference Type] [CounterController/<newRecordShowCoroutine>d__10]
 [Info][Rename Reference] [[Assembly-CSharp]CounterController/<newRecordShowCoroutine>d__10] Name: <newRecordShowCoroutine>d__10
 [Info][Rename Type] [CounterController/<newRecordShowCoroutine>d__10] to a
@@ -5047,6 +5085,9 @@ D:\Unity Projects\Color square\Library\PlayerScriptAssemblies\Assembly-CSharp-fi
 [Info][Rename Type] [ShopProductType] to c
 [Info][Rename Type] [ProductAddition] to d
 [Info][Rename Type] [ShopController/<>c__DisplayClass12_0] to a
+[Info][Update Reference Type] [ShopController/<buyButtonNoMoney>d__18]
+[Info][Rename Reference] [[Assembly-CSharp]ShopController/<buyButtonNoMoney>d__18] Name: <buyButtonNoMoney>d__18
+[Info][Rename Type] [ShopController/<buyButtonNoMoney>d__18] to b
 [Info][Update Reference Type] [SkinController/<previewSkinCoroutine>d__26]
 [Info][Rename Reference] [[Assembly-CSharp]SkinController/<previewSkinCoroutine>d__26] Name: <previewSkinCoroutine>d__26
 [Info][Rename Type] [SkinController/<previewSkinCoroutine>d__26] to b

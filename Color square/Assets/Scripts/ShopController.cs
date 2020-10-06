@@ -123,13 +123,16 @@ public class ShopController : MonoBehaviour
             {
                 if (moneyController.money >= product.price)
                 {
-                    moneyController.addToMoney(-product.price);
+                    moneyController.addToMoney(-(int)product.price);
                     product.setBought();
+                } else
+                {
+                    StartCoroutine(buyButtonNoMoney(product));
                 }
             }
 
             updateMoneyText();
-        }     
+        }
     }
 
     public void selectProduct(ProductController product)
@@ -167,5 +170,17 @@ public class ShopController : MonoBehaviour
     public void updateMoneyText()
     {
         moneyText.text = moneyController.money.ToString();
+    }
+
+    private IEnumerator buyButtonNoMoney(ProductController product)
+    {
+        product.buyButton.GetComponent<Animator>().SetBool("isNoMoney", true);
+        product.buyButton.interactable = false;
+
+        yield return null;
+        yield return new WaitForSeconds(product.buyButton.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0).Length);
+
+        product.buyButton.GetComponent<Animator>().SetBool("isNoMoney", false);
+        product.buyButton.interactable = true;
     }
 }

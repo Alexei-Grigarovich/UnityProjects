@@ -32,7 +32,7 @@ public class BlotMovement : MonoBehaviour
     void Update()
     {
         bassVolume = audioController.getMusicBassVolume();
-        if (BlotSpawner.blotSpeed > 0f && !audioController.audioIsMute && bassVolume > bassTrashhold)
+        if (BlotSpawner.blotSpeed > 0f && !audioController.audioIsMute && bassVolume > bassTrashhold && Time.timeScale > 0)
         {
             colorAlpha.a = Mathf.Lerp(minAlpha, 1, bassVolume * bassVolume);
             scaleVector = Vector2.Lerp(minScaleVector, maxScaleVector, bassVolume * bassVolume);

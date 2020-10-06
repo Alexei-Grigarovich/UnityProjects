@@ -13,7 +13,7 @@ public class ProductController : MonoBehaviour
     public Button previewButton;
 
     public int id;
-    public int price;
+    public float price;
     [Space(15)]
     public ShopProductType type;
     public ProductAddition addition;
@@ -68,7 +68,7 @@ public class ProductController : MonoBehaviour
             else
             {
                 money.SetActive(false);
-                priceText.text = price.ToString();
+                priceText.text = price.ToString() + " $";
                 priceText.rectTransform.offsetMax = new Vector2(-priceText.rectTransform.offsetMin.x, -priceText.rectTransform.offsetMin.y);
                 priceText.alignment = TextAnchor.MiddleCenter;
             }
