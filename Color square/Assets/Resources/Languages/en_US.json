@@ -14,5 +14,6 @@
 	"backgroundsButtonText":"Background",
 	"skinsButtonText":"Skin",
 	"donatesButtonText":"Donate",
-	"boughtText":"Bought"
+	"boughtText":"Bought",
+	"moneyEarnText":"Earned"
 }

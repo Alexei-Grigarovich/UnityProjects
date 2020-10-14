@@ -10,6 +10,13 @@ public class LoadSceneController : MonoBehaviour
 
     void Start()
     {
+        StartCoroutine(load());
+    }
+
+    private IEnumerator load()
+    {
+        yield return new WaitForSeconds(2);
+
         loadSceneAsyncOperation = SceneManager.LoadSceneAsync(1);
     }
 }

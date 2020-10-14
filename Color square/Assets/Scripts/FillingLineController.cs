@@ -43,7 +43,8 @@ public class FillingLineController : MonoBehaviour
             {
                 isFull = true;
                 moneyController.addToMoney(moneyToAdd);
-                audioController.playMoneySound();
+                moneyController.addToMoneyEarned(moneyToAdd);
+                audioController.playMoneySound(1f);
                 StartCoroutine(moneyTextShowCoroutine());
             }
         }

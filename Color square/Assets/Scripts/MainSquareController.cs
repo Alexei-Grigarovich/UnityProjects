@@ -9,6 +9,7 @@ public class MainSquareController : MonoBehaviour
 
     [SerializeField] private ChangeTriangleSprite[] trianglesScripts;
     [SerializeField] private PanesController panesController;
+    [SerializeField] private AudioController audioController;
     [Space(15)]
     public int squareState;
     [SerializeField] private float rotateDuration;
@@ -18,8 +19,6 @@ public class MainSquareController : MonoBehaviour
     [Space(15)]
     public GameObject startPlatform;
     [SerializeField] private GameObject teachObject;
-    [Space(15)]
-    [SerializeField] private AudioSource whooshAudio;
     [Space(15)]
     public Color[] colors;
     [Space(15)]
@@ -113,8 +112,7 @@ public class MainSquareController : MonoBehaviour
 
         setSquareStateToSide(side);
 
-        whooshAudio.pitch = Random.Range(0.9f, 1.1f);
-        whooshAudio.Play();
+        audioController.playWhooshSound(Random.Range(0.9f, 1.1f));
 
         Quaternion fromRotate = squareTransform.rotation;
         Quaternion toRotate = squareTransform.rotation * Quaternion.Euler(new Vector3(0, 0, 1) * (90 * -side));
@@ -157,6 +155,9 @@ public class MainSquareController : MonoBehaviour
                         rideParticles.Stop();
 
                         deadParticlesMain.startColor = colors[platformState];
+
+                        audioController.playLoseSound(1f);
+
                         deadParticles.Play();
                         Invoke("stopDeadParticles", deadParticlesMain.startLifetime.constant);
 

@@ -27,6 +27,8 @@ public class ButtonsController : MonoBehaviour
     public Button adButton;
     public Button menuButton;
     public Button shopButton;
+    public Button achievementsButton;
+    public Button scoreboardButton;
     [Header("Shop Pane Buttons")]
     public Button backgroundsButton;
     public Button skinsButton;
@@ -100,6 +102,8 @@ public class ButtonsController : MonoBehaviour
         settingsButton.gameObject.SetActive(false);
         noAdsButton.gameObject.SetActive(false);
         shopButton.gameObject.SetActive(false);
+        scoreboardButton.gameObject.SetActive(false);
+        achievementsButton.gameObject.SetActive(false);
 
         StartCoroutine(playButtonCoroutine(isStartAwake));
     }
@@ -166,6 +170,16 @@ public class ButtonsController : MonoBehaviour
         Application.OpenURL("mailto:" + email + "?subject=" + subject + "&body=" + body);
     }
 
+    public void scoreboardButtonAct()
+    {
+        Social.ShowLeaderboardUI();
+    }
+
+    public void achievementsButtonAct()
+    {
+        Social.ShowAchievementsUI();
+    }
+
     public void shopButtonAct()
     {
         TimeCounter.isMenu = false;
@@ -173,6 +187,8 @@ public class ButtonsController : MonoBehaviour
         noAdsButton.gameObject.SetActive(false);
         shopButton.gameObject.SetActive(false);
         settingsButton.gameObject.SetActive(false);
+        achievementsButton.gameObject.SetActive(false);
+        scoreboardButton.gameObject.SetActive(false);
 
         shopController.updateMoneyText();
 

@@ -23,8 +23,7 @@ public class AdController : MonoBehaviour
 
         PurchaseManager.OnPurchaseNonConsumable += PurchaseManager_OnPurchaseNonConsumable;
 
-        if (PurchaseManager.CheckBuyState("no_ads")) isNoAds = true;
-        else isNoAds = false;
+        StartCoroutine(checkBuyStatesOfNoAds());
     }
 
     private void PurchaseManager_OnPurchaseNonConsumable(UnityEngine.Purchasing.PurchaseEventArgs args)
@@ -80,5 +79,13 @@ public class AdController : MonoBehaviour
             return 0;
         }
         else return -1;
+    }
+
+    private IEnumerator checkBuyStatesOfNoAds()
+    {
+        yield return new WaitUntil(() => PurchaseManager.IsInitialized());
+
+        if (PurchaseManager.CheckBuyState("no_ads")) isNoAds = true;
+        else isNoAds = false;
     }
 }

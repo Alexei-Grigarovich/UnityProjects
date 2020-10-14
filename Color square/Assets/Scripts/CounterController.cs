@@ -26,12 +26,20 @@ public class CounterController : MonoBehaviour
 
     public void setMaxRecord()
     {
-        if ((int)counter > maxRecord) maxRecord = (int)counter;
+        if ((int)counter > maxRecord)
+        {
+            maxRecord = (int)counter;
+            saveMaxRecord();
+        }
     }
 
-    public void saveMaxRecord()
+    private void saveMaxRecord()
     {
         PlayerPrefs.SetInt("MaxRecord", maxRecord);
+        AndroidController.setScoreboard(AndroidController.scoreboardId, maxRecord, (bool success) => 
+        {
+            Debug.Log("Record is add in scoreboard!");
+        });
     }
 
     public int getMaxRecord()

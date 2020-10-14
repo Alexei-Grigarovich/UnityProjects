@@ -38,11 +38,10 @@ public class ProductController : MonoBehaviour
         previewButton = GetComponentsInChildren<Button>(true)[2];
 
         if (isBought) setBought();
-
+        
         if (isForRealMoney)
         {
-            if (PurchaseManager.CheckBuyState(purchaseStringId)) isBought = true;
-            else isBought = false;
+            //checkBuyState();
         }
         else
         {
@@ -103,6 +102,14 @@ public class ProductController : MonoBehaviour
     {
         isBought = true;
         PlayerPrefs.SetInt("BoughtProduct_" + id + "_Type_" + (int)type, 1);
+        updateBuyButton();
+    }
+
+    public void checkBuyState()
+    {
+        if (PurchaseManager.CheckBuyState(purchaseStringId)) isBought = true;
+        else isBought = false;
+
         updateBuyButton();
     }
 }

@@ -1,6 +1,4 @@
-﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
-
-Shader "Custom/BlurShader"
+﻿Shader "Unlit/Blur"
 {
 
 	Properties{
@@ -394,3 +392,4 @@ Shader "Custom/BlurShader"
 	}
 
 }
+

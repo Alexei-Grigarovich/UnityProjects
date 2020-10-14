@@ -101,6 +101,8 @@ public class ShopController : MonoBehaviour
             product.buyButton.onClick.AddListener(() => buyProduct(product));
             product.previewButton.onClick.AddListener(() => previewProduct(product));
         }
+
+        StartCoroutine(checkBuyStatesOfProducts());
     }
 
     public void updateProductButtonsText()
@@ -124,6 +126,7 @@ public class ShopController : MonoBehaviour
                 if (moneyController.money >= product.price)
                 {
                     moneyController.addToMoney(-(int)product.price);
+                    moneyController.saveMoney();
                     product.setBought();
                 } else
                 {
@@ -182,5 +185,15 @@ public class ShopController : MonoBehaviour
 
         product.buyButton.GetComponent<Animator>().SetBool("isNoMoney", false);
         product.buyButton.interactable = true;
+    }
+
+    private IEnumerator checkBuyStatesOfProducts()
+    {
+        yield return new WaitUntil(() => PurchaseManager.IsInitialized());
+
+        foreach (ProductController product in products)
+        {
+            if (product.isForRealMoney) product.checkBuyState();
+        }
     }
 }

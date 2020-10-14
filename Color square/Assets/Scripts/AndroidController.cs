@@ -5,10 +5,27 @@ using UnityEngine;
 public class AndroidController : MonoBehaviour
 {
     [SerializeField] private float maxTimeToDoubleTap;
+    [SerializeField] private string[] achievementsIDs;
+
+    public static string scoreboardId = "CgkIhaXbp9AHEAIQAg";
 
     private float startTapTime;
 
     private bool isDoubleTap = false;
+
+    void Start()
+    {
+        DontDestroyOnLoad(gameObject);
+
+        GooglePlayServices.initialize(false);
+        GooglePlayServices.authenticate((bool success) =>
+        {
+            setAchievement(achievementsIDs[0], 100f, (bool successGetAchieve) => 
+            {
+                Debug.Log("Welcome!");
+            });
+        });
+    }
 
     void Update()
     {
@@ -36,5 +53,15 @@ public class AndroidController : MonoBehaviour
                 }
             }
         }
+    }
+
+    public static void setAchievement(string id, float progress, System.Action<bool> action)
+    {
+        Social.ReportProgress(id, progress, action);
+    }
+
+    public static void setScoreboard(string id, long score, System.Action<bool> action)
+    {
+        Social.ReportScore(score, id, action);
     }
 }

@@ -363,7 +363,7 @@ GameObject:
   - component: {fileID: 6598261219206144277}
   m_Layer: 5
   m_Name: BuyButton
-  m_TagString: Untagged
+  m_TagString: FixButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -507,7 +507,7 @@ GameObject:
   - component: {fileID: 6243148666531712707}
   m_Layer: 5
   m_Name: Product
-  m_TagString: Untagged
+  m_TagString: FixButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1102,6 +1102,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BlurImage
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450259935536367325, guid: f0d80d732af66214ca8b1ab7009d3ebe,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5450259935536367326, guid: f0d80d732af66214ca8b1ab7009d3ebe,
         type: 3}

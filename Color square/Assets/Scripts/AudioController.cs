@@ -15,6 +15,8 @@ public class AudioController : MonoBehaviour
     [SerializeField] private AudioMixer audioMixer;
     [Space(15)]
     [SerializeField] private AudioSource moneySound;
+    [SerializeField] private AudioSource loseSound;
+    [SerializeField] private AudioSource whooshAudio;
     [Space(15)]
     [SerializeField] private AudioMixerSnapshot gameSnapshot;
     [SerializeField] private AudioMixerSnapshot deadSnapshot;
@@ -74,9 +76,22 @@ public class AudioController : MonoBehaviour
         return samples[0];
     }
 
-    public void playMoneySound()
+    public void playMoneySound(float pitch)
     {
+        moneySound.pitch = pitch;
         moneySound.Play();
+    }
+
+    public void playLoseSound(float pitch)
+    {
+        loseSound.pitch = pitch;
+        loseSound.Play();
+    }
+
+    public void playWhooshSound(float pitch)
+    {
+        whooshAudio.pitch = pitch;
+        whooshAudio.Play();
     }
 
     void Update()

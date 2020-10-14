@@ -33,6 +33,8 @@ public class PanesController : MonoBehaviour
     [SerializeField] private Text counterText;
     [SerializeField] private Text recordStringText;
     [SerializeField] private Text recordText;
+    [SerializeField] private Text moneyEarnedStringText;
+    [SerializeField] private Text moneyEarnedText;
     [Space(15)]
     [SerializeField] private float maxTimeToDoubleTap;
     [SerializeField] private float timeTransitionPane;
@@ -111,6 +113,8 @@ public class PanesController : MonoBehaviour
         buttonsController.noAdsButton.gameObject.SetActive(true);
         buttonsController.shopButton.gameObject.SetActive(true);
         buttonsController.settingsButton.gameObject.SetActive(true);
+        buttonsController.achievementsButton.gameObject.SetActive(true);
+        buttonsController.scoreboardButton.gameObject.SetActive(true);
 
         TimeCounter.isMenu = true;
     }
@@ -256,7 +260,10 @@ public class PanesController : MonoBehaviour
         recordStringText.text = LanguageController.langStrings.deadPaneRecordText;
         recordText.text = counterController.getMaxRecord().ToString();
 
-        counterController.saveMaxRecord();
+        moneyEarnedStringText.gameObject.SetActive(true);
+        moneyEarnedStringText.text = LanguageController.langStrings.moneyEarnText;
+        moneyEarnedText.text = "+" + moneyController.moneyEarned.ToString();
+
         moneyController.saveMoney();
     }
 

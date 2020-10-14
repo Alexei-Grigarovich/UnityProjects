@@ -14,5 +14,6 @@
 	"backgroundsButtonText":"Фон",
 	"skinsButtonText":"Скин",
 	"donatesButtonText":"Донат",
-	"boughtText":"Куплено"
+	"boughtText":"Куплено",
+	"moneyEarnText":"Заработано"
 }
