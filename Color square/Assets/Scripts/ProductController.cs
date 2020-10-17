@@ -23,6 +23,7 @@ public class ProductController : MonoBehaviour
     [Space(15)]
     public bool isForRealMoney;
     public bool isConsumable;
+    public bool isPairProducts;
     public int purchaseId;
     public string purchaseStringId;
     [Space(15)]
@@ -107,9 +108,22 @@ public class ProductController : MonoBehaviour
 
     public void checkBuyState()
     {
-        if (PurchaseManager.CheckBuyState(purchaseStringId)) isBought = true;
-        else isBought = false;
+        if (isPairProducts)
+        {
+            if (PurchaseManager.CheckBuyState(purchaseStringId))
+            {
+                isBought = true;
+                ShopController.instantiate.setBoughtPairProducts(this);
+            }
+            else isBought = false;
 
-        updateBuyButton();
+            updateBuyButton();
+        }
+        else {
+            if (PurchaseManager.CheckBuyState(purchaseStringId)) isBought = true;
+            else isBought = false;
+
+            updateBuyButton();
+        }
     }
 }

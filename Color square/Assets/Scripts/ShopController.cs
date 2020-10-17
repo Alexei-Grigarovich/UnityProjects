@@ -7,7 +7,8 @@ using UnityEngine.Purchasing;
 public enum ShopProductType
 {
     background,
-    skin
+    skin,
+    donate
 }
 public enum ProductAddition
 {
@@ -19,12 +20,16 @@ public enum ProductAddition
 
 public class ShopController : MonoBehaviour
 {
+    public static ShopController instantiate;
+
     [SerializeField] private Text moneyText;
     [Space(15)]
     [SerializeField] private BackgroundController backgroundController;
     [SerializeField] private SkinController skinController;
     [SerializeField] private PurchaseManager purchaseManager;
     [SerializeField] private MoneyController moneyController;
+    [SerializeField] private ButtonsController buttonsController;
+    [SerializeField] private AudioController audioController;
     [Space(15)]
     [SerializeField] private ProductController[] products;
 
@@ -32,6 +37,8 @@ public class ShopController : MonoBehaviour
 
     void Start()
     {
+        instantiate = this;
+
         PurchaseManager.OnPurchaseNonConsumable += PurchaseManager_OnPurchaseNonConsumable;
         PurchaseManager.OnPurchaseConsumable += PurchaseManager_OnPurchaseConsumable;
 
@@ -47,7 +54,17 @@ public class ShopController : MonoBehaviour
 
     private void PurchaseManager_OnPurchaseNonConsumable(PurchaseEventArgs args)
     {
-        if (args.purchasedProduct.definition.id != "no_ads")
+        if (args.purchasedProduct.definition.id == "no_ads")
+        {
+            lastProduct.setBought();           
+            buttonsController.noAdsButton.interactable = false;
+        }
+        else if (args.purchasedProduct.definition.id == "subwoofer_triangles")
+        {
+            setBoughtPairProducts(lastProduct);
+            lastProduct.setBought();
+        }
+        else
         {
             lastProduct.setBought();
         }
@@ -55,7 +72,7 @@ public class ShopController : MonoBehaviour
 
     #endregion
 
-    #region find
+    #region find 
 
     public ProductController findProduct(int id, ShopProductType productType)
     {
@@ -91,15 +108,33 @@ public class ShopController : MonoBehaviour
 
     #endregion
 
+    #region pair products
+
+    public void setBoughtPairProducts(ProductController product)
+    {
+        if (product.purchaseStringId == "subwoofer_triangles")
+        {
+            findProduct(3, ShopProductType.background).setBought();
+            findProduct(1, ShopProductType.skin).setBought();
+        }
+    }
+
+    #endregion
+
     void initializeProducts()
     {
         foreach (ProductController product in products)
         {
             product.initialize();
 
+            product.selectButton.onClick.AddListener(() => audioController.playButtonSound(1));
             product.selectButton.onClick.AddListener(() => selectProduct(product));
+
             product.buyButton.onClick.AddListener(() => buyProduct(product));
+            product.buyButton.onClick.AddListener(() => audioController.playButtonSound(1));
+
             product.previewButton.onClick.AddListener(() => previewProduct(product));
+            product.previewButton.onClick.AddListener(() => audioController.playButtonSound(1));
         }
 
         StartCoroutine(checkBuyStatesOfProducts());

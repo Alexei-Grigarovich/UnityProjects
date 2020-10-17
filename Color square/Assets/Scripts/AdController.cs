@@ -58,9 +58,9 @@ public class AdController : MonoBehaviour
         return adIsFinished;
     }
 
-    public static int showRewardedVideoAd()
+    public static int showRewardedVideoAd(bool checkNoAds)
     {
-        if (isNoAds) return -2;
+        if (isNoAds && checkNoAds) return -2;
         isRewVideo = true;
         if (Advertisement.IsReady(rewVideoPlacementId)) {
             showAd(rewVideoPlacementId);

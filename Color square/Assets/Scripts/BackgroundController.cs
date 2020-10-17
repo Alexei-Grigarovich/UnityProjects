@@ -41,9 +41,21 @@ public class BackgroundController : MonoBehaviour
         ProductController findedBackground = shopController.findProduct(currentBackground, ShopProductType.background);
 
         if (findedBackground.isBought) setBackgroundSprite(findedBackground.product);
-        else setCurrentBackground(0, shopController.findProduct(0, ShopProductType.background).product, ProductAddition.blot, false);      
+        else setCurrentBackground(0, shopController.findProduct(0, ShopProductType.background).product, ProductAddition.blot, false);
+
+        //StartCoroutine(loadBackgroundAfterInit());
     }
-    
+
+    private IEnumerator loadBackgroundAfterInit()
+    {
+        yield return new WaitUntil(() => PurchaseManager.IsInitialized());
+
+        ProductController findedBackground = shopController.findProduct(currentBackground, ShopProductType.background);
+
+        if (findedBackground.isBought) setBackgroundSprite(findedBackground.product);
+        else setCurrentBackground(0, shopController.findProduct(0, ShopProductType.background).product, ProductAddition.blot, false);
+    }
+
     public void setCurrentBackground(int id, Sprite backgroundSprite, ProductAddition addition, bool playAnim)
     {
         if (currentBackground != id)

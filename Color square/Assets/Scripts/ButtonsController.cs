@@ -29,6 +29,7 @@ public class ButtonsController : MonoBehaviour
     public Button shopButton;
     public Button achievementsButton;
     public Button scoreboardButton;
+    public Button rewardMoneyButton;
     [Header("Shop Pane Buttons")]
     public Button backgroundsButton;
     public Button skinsButton;
@@ -42,7 +43,10 @@ public class ButtonsController : MonoBehaviour
     [SerializeField] Text continueCounter;
     [Space(15)]
     [SerializeField] private int countGamesForOneAd;    
-    [SerializeField] private int timeToContinue;   
+    [SerializeField] private int timeToContinue;
+    [Space(15)]
+    [SerializeField] private int timeToInteractable;
+    [SerializeField] private int rewardMoneyCount;
 
     private LanguageController languageController;
     private TextDeterminant textDeterminant;
@@ -52,6 +56,9 @@ public class ButtonsController : MonoBehaviour
 
     private Scene scene;
     private int timeLeft;
+
+    private Coroutine lastMoneyRewardCoroutine;
+    private Coroutine lastAdButtonCoroutine;
 
     void Start()
     {
@@ -110,8 +117,8 @@ public class ButtonsController : MonoBehaviour
 
     public void adButtonAct()
     {
-        StopCoroutine(adButtonCoroutine());
-        StartCoroutine(adButtonCoroutine());
+        if (lastAdButtonCoroutine != null) StopCoroutine(lastAdButtonCoroutine);
+        lastAdButtonCoroutine = StartCoroutine(adButtonCoroutine());
     }
 
     public void settingsButtonAct()
@@ -237,10 +244,38 @@ public class ButtonsController : MonoBehaviour
         Application.OpenURL("https://play.google.com/store/apps/details?id=com.gamestepforward.colorsquare");
     }
 
+    public void noAdsButtonAct()
+    {
+        shopButtonAct();
+        donatesButton.onClick.Invoke();
+    }
+
+    public void moneyRewardButtonAct()
+    {
+        if (lastMoneyRewardCoroutine != null) StopCoroutine(lastMoneyRewardCoroutine);
+        lastMoneyRewardCoroutine = StartCoroutine(moneyRewardButtonCoroutine());
+    }
+
+    private IEnumerator moneyRewardButtonCoroutine()
+    {
+        if (AdController.showRewardedVideoAd(false) >= 0) yield return new WaitUntil(() => AdController.lastRewAdIsFinished());
+
+        moneyController.addToMoney(rewardMoneyCount);
+        moneyController.saveMoney();
+
+        shopController.updateMoneyText();
+
+        rewardMoneyButton.interactable = false;
+        yield return new WaitForSeconds(timeToInteractable);
+        rewardMoneyButton.interactable = true;
+    }
+
     private IEnumerator playButtonCoroutine(bool isStartAwake)
     {
         if (isStartAwake) yield return new WaitForFixedUpdate();
         else yield return StartCoroutine(panesController.transitionPaneCoroutine(true));
+
+        if (lastMoneyRewardCoroutine != null) StopCoroutine(lastMoneyRewardCoroutine);
 
         counter.SetActive(true);
         pauseButton.gameObject.SetActive(true);
@@ -287,8 +322,7 @@ public class ButtonsController : MonoBehaviour
     {       
         panesController.stopDeadPaneCoroutine();
 
-        if (AdController.showRewardedVideoAd() >= 0) yield return new WaitUntil(() => AdController.lastRewAdIsFinished());         
-
+        if (AdController.showRewardedVideoAd(true) >= 0) yield return new WaitUntil(() => AdController.lastRewAdIsFinished());         
         panesController.adIsWasUsed = true;           
 
         mainSquareController.startPlatform.GetComponent<PlatformState>().setPlatformState(mainSquareController.squareState);

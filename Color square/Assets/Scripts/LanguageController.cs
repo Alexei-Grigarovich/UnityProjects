@@ -54,4 +54,7 @@ public class LangStrings
     public string donatesButtonText;
     public string boughtText;
     public string moneyEarnText;
+    public string withoutAdsText;
+    public string plusLiveText;
+    public string watchText;
 }

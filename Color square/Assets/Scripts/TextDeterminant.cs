@@ -12,6 +12,9 @@ public class TextDeterminant : MonoBehaviour
     [SerializeField] private Text backgroundsButtonText;
     [SerializeField] private Text skinsButtonText;
     [SerializeField] private Text donateButtonText;
+    [SerializeField] private Text dnt0Text;
+    [SerializeField] private Text dnt1Text;
+    [SerializeField] private Text rewardMoneyText;
 
     void Start()
     {
@@ -27,5 +30,8 @@ public class TextDeterminant : MonoBehaviour
         backgroundsButtonText.text = LanguageController.langStrings.backgroundsButtonText;
         skinsButtonText.text = LanguageController.langStrings.skinsButtonText;
         donateButtonText.text = LanguageController.langStrings.donatesButtonText;
+        dnt0Text.text = LanguageController.langStrings.backgroundsButtonText + "\n&\n" + LanguageController.langStrings.skinsButtonText;
+        dnt1Text.text = LanguageController.langStrings.withoutAdsText + "\n&\n+1 " + LanguageController.langStrings.plusLiveText;
+        rewardMoneyText.text = LanguageController.langStrings.watchText;
     }
 }

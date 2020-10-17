@@ -47,6 +47,18 @@ public class SkinController : MonoBehaviour
 
         if (findedSkin.isBought) setSkinSprite(findedSkin.product, findedSkin.skinLayer);
         else setCurrentSkin(0, shopController.findProduct(0, ShopProductType.skin).product, null, ProductAddition.none);
+
+        //StartCoroutine(loadSkinAfterInit());
+    }
+
+    private IEnumerator loadSkinAfterInit()
+    {
+        yield return new WaitUntil(() => PurchaseManager.IsInitialized());
+
+        ProductController findedSkin = shopController.findProduct(currentSkin, ShopProductType.skin);
+
+        if (findedSkin.isBought) setSkinSprite(findedSkin.product, findedSkin.skinLayer);
+        else setCurrentSkin(0, shopController.findProduct(0, ShopProductType.skin).product, null, ProductAddition.none);
     }
 
     public void setCurrentSkin(int id, Sprite sprite, Sprite skinLayer, ProductAddition addition)

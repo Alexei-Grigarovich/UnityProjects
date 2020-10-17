@@ -58,7 +58,7 @@ public class PanesController : MonoBehaviour
         deadPane.SetActive(false);
         settingsPane.SetActive(false);
 
-        StartCoroutine(transitionPaneCoroutine(false));
+        StartCoroutine(transitionPaneCoroutineAfterInit(false));
     }
 
     public void showDeadPane()
@@ -211,6 +211,13 @@ public class PanesController : MonoBehaviour
 
         if(setPaneActiveFalse) pane.SetActive(false);
         buttonsController.playButton.gameObject.SetActive(setActivePlayButton);
+    }
+
+    public IEnumerator transitionPaneCoroutineAfterInit(bool toShow)
+    {
+        yield return new WaitUntil(() => PurchaseManager.IsInitialized());
+
+        StartCoroutine(transitionPaneCoroutine(toShow));
     }
 
     public IEnumerator transitionPaneCoroutine(bool toShow)

@@ -14,6 +14,7 @@ public class AudioController : MonoBehaviour
 {
     [SerializeField] private AudioMixer audioMixer;
     [Space(15)]
+    [SerializeField] private AudioSource buttonAudio;
     [SerializeField] private AudioSource moneySound;
     [SerializeField] private AudioSource loseSound;
     [SerializeField] private AudioSource whooshAudio;
@@ -92,6 +93,12 @@ public class AudioController : MonoBehaviour
     {
         whooshAudio.pitch = pitch;
         whooshAudio.Play();
+    }
+
+    public void playButtonSound(float pitch)
+    {
+        buttonAudio.pitch = pitch;
+        buttonAudio.Play();
     }
 
     void Update()
