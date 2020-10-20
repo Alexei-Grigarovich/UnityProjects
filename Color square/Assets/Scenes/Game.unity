@@ -32111,9 +32111,9 @@ MonoBehaviour:
   - {fileID: 7540334785795327998, guid: 357f9d13573c2cb4baebe4fec2cb4809, type: 3}
   - {fileID: 6668941982983896950, guid: 630ad773cb55a7e4b82538492a2a4505, type: 3}
   stairHeight: 3
-  startingPlatformSpeed: 6
-  accelerationCoefficientPlatform: 0.0004
-  maxPlatformSpeed: 12
+  startingPlatformSpeed: 7
+  accelerationCoefficientPlatform: 0.0003
+  maxPlatformSpeed: 11
   countSpawnColors: 00000000000000000000000000000000
   maxCountOfDuplicateColors: 2
   nextPlatformState: -1
