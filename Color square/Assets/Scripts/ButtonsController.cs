@@ -179,11 +179,13 @@ public class ButtonsController : MonoBehaviour
 
     public void scoreboardButtonAct()
     {
-        Social.ShowLeaderboardUI();
+        Debug.Log("Opening Leaderboard");
+        GooglePlayGames.PlayGamesPlatform.Instance.ShowLeaderboardUI(GPGSIds.leaderboard_best_players);
     }
 
     public void achievementsButtonAct()
     {
+        Debug.Log("Opening Achievements");
         Social.ShowAchievementsUI();
     }
 
@@ -258,16 +260,19 @@ public class ButtonsController : MonoBehaviour
 
     private IEnumerator moneyRewardButtonCoroutine()
     {
-        if (AdController.showRewardedVideoAd(false) >= 0) yield return new WaitUntil(() => AdController.lastRewAdIsFinished());
+        if (AdController.showRewardedVideoAd(false) >= 0)
+        {
+            yield return new WaitUntil(() => AdController.lastRewAdIsFinished());
 
-        moneyController.addToMoney(rewardMoneyCount);
-        moneyController.saveMoney();
+            moneyController.addToMoney(rewardMoneyCount);
+            moneyController.saveMoney();
 
-        shopController.updateMoneyText();
+            shopController.updateMoneyText();
 
-        rewardMoneyButton.interactable = false;
-        yield return new WaitForSeconds(timeToInteractable);
-        rewardMoneyButton.interactable = true;
+            rewardMoneyButton.interactable = false;
+            yield return new WaitForSeconds(timeToInteractable);
+            rewardMoneyButton.interactable = true;
+        }
     }
 
     private IEnumerator playButtonCoroutine(bool isStartAwake)
@@ -308,7 +313,7 @@ public class ButtonsController : MonoBehaviour
 
         TimeCounter.saveTimeInGame();
 
-        StartCoroutine(panesController.transitionPaneCoroutine(false));    
+        StartCoroutine(panesController.transitionPaneCoroutineAfterInit(false));    
     }
 
     private IEnumerator menuButtonCoroutine()

@@ -36,7 +36,7 @@ public class CounterController : MonoBehaviour
     private void saveMaxRecord()
     {
         PlayerPrefs.SetInt("MaxRecord", maxRecord);
-        AndroidController.setScoreboard(AndroidController.scoreboardId, maxRecord, (bool success) => 
+        AndroidController.setScoreboard(GPGSIds.leaderboard_best_players, maxRecord, (bool success) => 
         {
             Debug.Log("Record is add in scoreboard!");
         });

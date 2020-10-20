@@ -43,17 +43,22 @@ public class SkinController : MonoBehaviour
         if (PlayerPrefs.HasKey("SkinAddition")) currentSkinAddition = (ProductAddition)PlayerPrefs.GetInt("SkinAddition");
         else currentSkinAddition = 0;
 
-        ProductController findedSkin = shopController.findProduct(currentSkin, ShopProductType.skin);
-
-        if (findedSkin.isBought) setSkinSprite(findedSkin.product, findedSkin.skinLayer);
-        else setCurrentSkin(0, shopController.findProduct(0, ShopProductType.skin).product, null, ProductAddition.none);
-
-        //StartCoroutine(loadSkinAfterInit());
+        StartCoroutine(loadSkinAfterInit(3));
     }
 
-    private IEnumerator loadSkinAfterInit()
+    private IEnumerator loadSkinAfterInit(float time)
     {
-        yield return new WaitUntil(() => PurchaseManager.IsInitialized());
+        float currentTime = 0;
+
+        if (currentSkin == 1)
+        {
+            while (currentTime < time)
+            {
+                if (shopController.realMoneyProductsIsInit) break;
+                currentTime += Time.unscaledDeltaTime;
+                yield return null;
+            }
+        }
 
         ProductController findedSkin = shopController.findProduct(currentSkin, ShopProductType.skin);
 

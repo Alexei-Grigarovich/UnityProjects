@@ -60,10 +60,11 @@ public class ProductController : MonoBehaviour
             if (isBought)
             {
                 buyButton.interactable = false;
-                money.SetActive(false);
+                if(money != null) money.SetActive(false);
                 priceText.rectTransform.offsetMax = new Vector2(-priceText.rectTransform.offsetMin.x, -priceText.rectTransform.offsetMin.y - 5);
                 priceText.alignment = TextAnchor.MiddleCenter;
-                priceText.text = LanguageController.langStrings.boughtText;               
+                priceText.text = LanguageController.langStrings.boughtText;
+                buyButton.GetComponent<Image>().raycastTarget = false;
             }
             else
             {
@@ -82,6 +83,7 @@ public class ProductController : MonoBehaviour
                 priceText.rectTransform.offsetMax = new Vector2(-priceText.rectTransform.offsetMin.x, -priceText.rectTransform.offsetMin.y - 5);
                 priceText.alignment = TextAnchor.MiddleCenter;
                 priceText.text = LanguageController.langStrings.boughtText;
+                buyButton.GetComponent<Image>().raycastTarget = false;
             }
             else
             {

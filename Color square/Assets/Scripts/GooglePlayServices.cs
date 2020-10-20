@@ -5,6 +5,8 @@ using GooglePlayGames.BasicApi;
 
 public static class GooglePlayServices
 {
+    public static PlayGamesPlatform platform;
+
     public static bool isAuthenticated
     {
         get
@@ -16,14 +18,15 @@ public static class GooglePlayServices
 
     public static void initialize(bool debug)
     {
-        PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().EnableSavedGames().Build();
+        Debug.Log("Initializing...");
+        PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().Build();
         PlayGamesPlatform.InitializeInstance(config);
         PlayGamesPlatform.DebugLogEnabled = debug;
-        PlayGamesPlatform.Activate();
+        platform = PlayGamesPlatform.Activate();
     }
 
     public static void authenticate(Action<bool> action)
     {
-        Social.localUser.Authenticate(action);
+        Social.Active.localUser.Authenticate(action);
     }
 }

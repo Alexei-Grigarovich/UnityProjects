@@ -38,17 +38,22 @@ public class BackgroundController : MonoBehaviour
         if (PlayerPrefs.HasKey("BackgroundAddition")) currentBackgroundAddition = (ProductAddition)PlayerPrefs.GetInt("BackgroundAddition");
         else currentBackgroundAddition = 0;
 
-        ProductController findedBackground = shopController.findProduct(currentBackground, ShopProductType.background);
-
-        if (findedBackground.isBought) setBackgroundSprite(findedBackground.product);
-        else setCurrentBackground(0, shopController.findProduct(0, ShopProductType.background).product, ProductAddition.blot, false);
-
-        //StartCoroutine(loadBackgroundAfterInit());
+        StartCoroutine(loadBackgroundAfterInit(3));
     }
 
-    private IEnumerator loadBackgroundAfterInit()
+    private IEnumerator loadBackgroundAfterInit(float time)
     {
-        yield return new WaitUntil(() => PurchaseManager.IsInitialized());
+        float currentTime = 0;
+
+        if (currentBackground == 3)
+        {
+            while (currentTime < time)
+            {
+                if (shopController.realMoneyProductsIsInit) break;
+                currentTime += Time.unscaledDeltaTime;
+                yield return null;
+            }
+        }
 
         ProductController findedBackground = shopController.findProduct(currentBackground, ShopProductType.background);
 
@@ -150,6 +155,9 @@ public class BackgroundController : MonoBehaviour
     private void setBackgroundSprite(Sprite sprite)
     {
         for (int i = 0; i < backgrounds.Length - 1; i++) backgrounds[i].sprite = sprite;
+
+        if (currentBackground == 1) Camera.main.backgroundColor = new Color(22f / 255f, 22f / 255f, 22f / 255f);
+        else Camera.main.backgroundColor = Color.black;
     }
 
     IEnumerator setCurrentBackgroundCoroutine(Sprite backgroundSprite)

@@ -28,7 +28,7 @@ public class AdController : MonoBehaviour
 
     private void PurchaseManager_OnPurchaseNonConsumable(UnityEngine.Purchasing.PurchaseEventArgs args)
     {
-        if (args.purchasedProduct.definition.id == "no_ads") isNoAds = true;
+        if (args.purchasedProduct.definition.id == "noads") isNoAds = true;
     }
 
     private static void showAd(string placementId)
@@ -60,6 +60,7 @@ public class AdController : MonoBehaviour
 
     public static int showRewardedVideoAd(bool checkNoAds)
     {
+        if (Application.internetReachability == NetworkReachability.NotReachable) return -3;
         if (isNoAds && checkNoAds) return -2;
         isRewVideo = true;
         if (Advertisement.IsReady(rewVideoPlacementId)) {
@@ -71,6 +72,7 @@ public class AdController : MonoBehaviour
 
     public static int showVideoAd()
     {
+        if (Application.internetReachability == NetworkReachability.NotReachable) return -3;
         if (isNoAds) return -2;
         isRewVideo = false;
         if (Advertisement.IsReady(videoPlacementId))
@@ -85,7 +87,7 @@ public class AdController : MonoBehaviour
     {
         yield return new WaitUntil(() => PurchaseManager.IsInitialized());
 
-        if (PurchaseManager.CheckBuyState("no_ads")) isNoAds = true;
+        if (PurchaseManager.CheckBuyState("noads")) isNoAds = true;
         else isNoAds = false;
     }
 }

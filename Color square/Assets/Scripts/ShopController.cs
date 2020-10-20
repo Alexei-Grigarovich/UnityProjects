@@ -35,6 +35,8 @@ public class ShopController : MonoBehaviour
 
     private ProductController lastProduct;
 
+    public bool realMoneyProductsIsInit;
+
     void Start()
     {
         instantiate = this;
@@ -42,6 +44,7 @@ public class ShopController : MonoBehaviour
         PurchaseManager.OnPurchaseNonConsumable += PurchaseManager_OnPurchaseNonConsumable;
         PurchaseManager.OnPurchaseConsumable += PurchaseManager_OnPurchaseConsumable;
 
+        realMoneyProductsIsInit = false;
         initializeProducts();
     }
 
@@ -54,19 +57,19 @@ public class ShopController : MonoBehaviour
 
     private void PurchaseManager_OnPurchaseNonConsumable(PurchaseEventArgs args)
     {
-        if (args.purchasedProduct.definition.id == "no_ads")
+        if (args.purchasedProduct.definition.id == "noads")
         {
-            lastProduct.setBought();           
+            if(lastProduct != null) lastProduct.setBought();           
             buttonsController.noAdsButton.interactable = false;
         }
         else if (args.purchasedProduct.definition.id == "subwoofer_triangles")
         {
             setBoughtPairProducts(lastProduct);
-            lastProduct.setBought();
+            if (lastProduct != null) lastProduct.setBought();
         }
         else
         {
-            lastProduct.setBought();
+            if(lastProduct != null) lastProduct.setBought();
         }
     }
 
@@ -230,5 +233,6 @@ public class ShopController : MonoBehaviour
         {
             if (product.isForRealMoney) product.checkBuyState();
         }
+        realMoneyProductsIsInit = true;
     }
 }

@@ -215,7 +215,16 @@ public class PanesController : MonoBehaviour
 
     public IEnumerator transitionPaneCoroutineAfterInit(bool toShow)
     {
-        yield return new WaitUntil(() => PurchaseManager.IsInitialized());
+        transitionPaneImage.color = new Color(0, 0, 0, 1);
+
+        float currentTime = 0;
+
+        while (currentTime < 1)
+        {
+            if (PurchaseManager.IsInitialized()) break;
+            currentTime += Time.unscaledDeltaTime;
+            yield return null;
+        }
 
         StartCoroutine(transitionPaneCoroutine(toShow));
     }

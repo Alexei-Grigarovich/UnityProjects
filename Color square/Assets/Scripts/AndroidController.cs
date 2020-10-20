@@ -5,9 +5,6 @@ using UnityEngine;
 public class AndroidController : MonoBehaviour
 {
     [SerializeField] private float maxTimeToDoubleTap;
-    [SerializeField] private string[] achievementsIDs;
-
-    public static string scoreboardId = "CgkIhaXbp9AHEAIQAg";
 
     private float startTapTime;
 
@@ -17,13 +14,20 @@ public class AndroidController : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
 
-        GooglePlayServices.initialize(false);
-        GooglePlayServices.authenticate((bool success) =>
+        GooglePlayServices.initialize(true);
+        GooglePlayServices.authenticate(success =>
         {
-            setAchievement(achievementsIDs[0], 100f, (bool successGetAchieve) => 
+            if (success)
             {
-                Debug.Log("Welcome!");
-            });
+                Debug.Log("Authenticate is success");
+                setAchievement(GPGSIds.achievement_welcome, 100f, (bool successGetAchieve) =>
+                {
+                    if (successGetAchieve) Debug.Log("Welcome!");
+                });
+            } else
+            {
+                Debug.Log("Authenticate ERROR");
+            }
         });
     }
 
