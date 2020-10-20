@@ -61,11 +61,13 @@ public class AndroidController : MonoBehaviour
 
     public static void setAchievement(string id, float progress, System.Action<bool> action)
     {
+        Debug.Log("Setting achievement...");
         Social.ReportProgress(id, progress, action);
     }
 
     public static void setScoreboard(string id, long score, System.Action<bool> action)
     {
+        Debug.Log("Setting leaderboard...");
         Social.ReportScore(score, id, action);
     }
 }
