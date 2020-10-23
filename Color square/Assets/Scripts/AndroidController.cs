@@ -1,18 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FantomLib;
 
 public class AndroidController : MonoBehaviour
 {
+    private static ToastController toastController;
+    private static VibratorController vibratorController;
+
     [SerializeField] private float maxTimeToDoubleTap;
 
     private float startTapTime;
 
-    private bool isDoubleTap = false;
+    private bool isDoubleTap = false;        
 
     void Start()
     {
         DontDestroyOnLoad(gameObject);
+
+        if (toastController == null) toastController = new ToastController();
+        if (vibratorController == null) vibratorController = new VibratorController();
 
         GooglePlayServices.initialize(true);
         GooglePlayServices.authenticate(success =>
@@ -69,5 +76,21 @@ public class AndroidController : MonoBehaviour
     {
         Debug.Log("Setting leaderboard...");
         Social.ReportScore(score, id, action);
+    }
+
+    public static void showToast(string text)
+    {
+        toastController.Show(text);
+    }
+
+    public static void showToast(string text, bool longDuration)
+    {
+        toastController.Show(text, longDuration);
+    }
+
+    public static void vibrate(long duration)
+    {
+        vibratorController.Duration = duration;
+        vibratorController.StartVibrator();
     }
 }

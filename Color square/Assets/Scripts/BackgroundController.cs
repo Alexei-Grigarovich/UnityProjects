@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FantomLib;
 
 public class BackgroundController : MonoBehaviour
 {
@@ -53,6 +54,8 @@ public class BackgroundController : MonoBehaviour
                 currentTime += Time.unscaledDeltaTime;
                 yield return null;
             }
+
+            if (currentTime >= time) AndroidController.showToast("Timeout");
         }
 
         ProductController findedBackground = shopController.findProduct(currentBackground, ShopProductType.background);

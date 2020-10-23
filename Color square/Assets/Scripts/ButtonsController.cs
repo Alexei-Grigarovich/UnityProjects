@@ -30,6 +30,7 @@ public class ButtonsController : MonoBehaviour
     public Button achievementsButton;
     public Button scoreboardButton;
     public Button rewardMoneyButton;
+    public Button moneyX2Button;
     [Header("Shop Pane Buttons")]
     public Button backgroundsButton;
     public Button skinsButton;
@@ -42,10 +43,10 @@ public class ButtonsController : MonoBehaviour
     [Space(15)]
     [SerializeField] Text continueCounter;
     [Space(15)]
-    [SerializeField] private int countGamesForOneAd;    
+    [SerializeField, Tooltip("One add play in ... games")] private int countGamesForOneAd;    
     [SerializeField] private int timeToContinue;
     [Space(15)]
-    [SerializeField] private int timeToInteractable;
+    [SerializeField, Tooltip("Reward Button")] private int timeToInteractable;
     [SerializeField] private int rewardMoneyCount;
 
     private LanguageController languageController;
@@ -59,6 +60,7 @@ public class ButtonsController : MonoBehaviour
 
     private Coroutine lastMoneyRewardCoroutine;
     private Coroutine lastAdButtonCoroutine;
+    private Coroutine lastMoneyX2ButtonCoroutine;
 
     void Start()
     {
@@ -252,10 +254,34 @@ public class ButtonsController : MonoBehaviour
         donatesButton.onClick.Invoke();
     }
 
+    public void moneyX2ButtonAct()
+    {
+        if (lastMoneyX2ButtonCoroutine != null) StopCoroutine(lastMoneyX2ButtonCoroutine);
+        lastMoneyX2ButtonCoroutine = StartCoroutine(moneyX2ButtonActCoroutine());
+    }
+
     public void moneyRewardButtonAct()
     {
         if (lastMoneyRewardCoroutine != null) StopCoroutine(lastMoneyRewardCoroutine);
         lastMoneyRewardCoroutine = StartCoroutine(moneyRewardButtonCoroutine());
+    }
+
+    private IEnumerator moneyX2ButtonActCoroutine()
+    {
+        if (moneyController.moneyEarned > 0)
+        {
+            if (AdController.showRewardedVideoAd(false) >= 0)
+            {
+                yield return new WaitUntil(() => AdController.lastRewAdIsFinished());
+
+                moneyController.addToMoney(moneyController.moneyEarned);
+                moneyController.saveMoney();
+
+                moneyX2Button.interactable = false;
+                panesController.moneyX2Text.gameObject.SetActive(true);
+                moneyX2Button.gameObject.GetComponentInParent<Animator>().SetBool("IsFade", false);
+            }
+        }
     }
 
     private IEnumerator moneyRewardButtonCoroutine()

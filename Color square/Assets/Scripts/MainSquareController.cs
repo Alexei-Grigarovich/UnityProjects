@@ -18,7 +18,7 @@ public class MainSquareController : MonoBehaviour
     [SerializeField] private Sprite coloredSquareSprite;
     [Space(15)]
     public GameObject startPlatform;
-    [SerializeField] private GameObject teachObject;
+    public GameObject teachObject;
     [Space(15)]
     public Color[] colors;
     [Space(15)]

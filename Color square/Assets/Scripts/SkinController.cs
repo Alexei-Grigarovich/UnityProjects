@@ -58,6 +58,8 @@ public class SkinController : MonoBehaviour
                 currentTime += Time.unscaledDeltaTime;
                 yield return null;
             }
+
+            if (currentTime >= time) AndroidController.showToast("Timeout");
         }
 
         ProductController findedSkin = shopController.findProduct(currentSkin, ShopProductType.skin);

@@ -117,7 +117,14 @@ public class ProductController : MonoBehaviour
                 isBought = true;
                 ShopController.instantiate.setBoughtPairProducts(this);
             }
-            else isBought = false;
+            else
+            {
+                if (purchaseStringId == "subwoofer_triangles" && PurchaseManager.CheckBuyState("bg_triangles") && PurchaseManager.CheckBuyState("subwoofer_skin"))
+                {
+                    isBought = true;
+                }
+                else isBought = false;
+            }
 
             updateBuyButton();
         }

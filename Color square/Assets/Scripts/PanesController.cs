@@ -35,6 +35,8 @@ public class PanesController : MonoBehaviour
     [SerializeField] private Text recordText;
     [SerializeField] private Text moneyEarnedStringText;
     [SerializeField] private Text moneyEarnedText;
+    [SerializeField] private Text skipAdText;
+    public Text moneyX2Text;
     [Space(15)]
     [SerializeField] private float maxTimeToDoubleTap;
     [SerializeField] private float timeTransitionPane;
@@ -125,8 +127,10 @@ public class PanesController : MonoBehaviour
         {
             timer.SetActive(true);
             buttonsController.adButton.gameObject.SetActive(true);
+            buttonsController.moneyX2Button.gameObject.SetActive(false);
             buttonsController.againButton.gameObject.SetActive(false);
             buttonsController.menuButton.gameObject.SetActive(false);
+            skipAdText.gameObject.SetActive(true);
 
             deadPaneBlurPane.offsetMin = new Vector2(40f, 175f);
             deadPaneBlurPane.offsetMax = new Vector2(-40f, -175f);           
@@ -158,8 +162,21 @@ public class PanesController : MonoBehaviour
 
         timer.SetActive(false);
         buttonsController.adButton.gameObject.SetActive(false);
+        buttonsController.moneyX2Button.gameObject.SetActive(true);
         buttonsController.againButton.gameObject.SetActive(true);
         buttonsController.menuButton.gameObject.SetActive(true);
+        skipAdText.gameObject.SetActive(false);
+
+        if (Application.internetReachability != NetworkReachability.NotReachable && moneyController.moneyEarned > 0)
+        {
+            buttonsController.moneyX2Button.gameObject.GetComponentInParent<Animator>().SetBool("IsFade", true);
+            moneyX2Text.text = "+" + moneyController.moneyEarned;
+            buttonsController.moneyX2Button.interactable = true;
+        }
+        else
+        {
+            buttonsController.moneyX2Button.interactable = false;
+        }
 
         counter.SetActive(false);
 
@@ -280,6 +297,7 @@ public class PanesController : MonoBehaviour
         moneyEarnedStringText.text = LanguageController.langStrings.moneyEarnText;
         moneyEarnedText.text = "+" + moneyController.moneyEarned.ToString();
 
+        TimeCounter.saveTimeInGame();
         moneyController.saveMoney();
     }
 

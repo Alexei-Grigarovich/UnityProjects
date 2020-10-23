@@ -41,8 +41,9 @@ public class TimeCounter : MonoBehaviour
     void Update()
     {
         timeInGame += Time.deltaTime;
-        if (!MainSquareController.getIsPlay() && !ratingPaneIsShowed && timeInGame > timeToShowRatingPane * 60f)
+        if (isMenu && !ratingPaneIsShowed && timeInGame > timeToShowRatingPane * 60f)
         {
+            Debug.Log("Rating Pane Show");
             ratingPaneIsShowed = true;
             PlayerPrefs.SetInt("RatingPaneIsShowed", 1);
             StartCoroutine(panesController.showRatingPaneCoroutine());

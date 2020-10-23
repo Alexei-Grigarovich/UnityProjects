@@ -56,5 +56,6 @@ public class LangStrings
     public string moneyEarnText;
     public string withoutAdsText;
     public string plusLiveText;
-    public string watchText;
+    public string freeText;
+    public string skipAdText;
 }
