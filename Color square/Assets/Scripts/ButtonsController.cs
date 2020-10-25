@@ -24,7 +24,6 @@ public class ButtonsController : MonoBehaviour
     public Button settingsButton;
     public Button noAdsButton;
     public Button againButton;
-    public Button adButton;
     public Button menuButton;
     public Button shopButton;
     public Button achievementsButton;
@@ -106,7 +105,7 @@ public class ButtonsController : MonoBehaviour
 
     public void playButtonAct(bool isStartAwake)
     {
-        panesController.adIsWasUsed = false;
+        panesController.continueGameIsUsed = false;
         playButton.gameObject.SetActive(false);
         settingsButton.gameObject.SetActive(false);
         noAdsButton.gameObject.SetActive(false);
@@ -115,12 +114,6 @@ public class ButtonsController : MonoBehaviour
         achievementsButton.gameObject.SetActive(false);
 
         StartCoroutine(playButtonCoroutine(isStartAwake));
-    }
-
-    public void adButtonAct()
-    {
-        if (lastAdButtonCoroutine != null) StopCoroutine(lastAdButtonCoroutine);
-        lastAdButtonCoroutine = StartCoroutine(adButtonCoroutine());
     }
 
     public void settingsButtonAct()
@@ -349,17 +342,11 @@ public class ButtonsController : MonoBehaviour
         SceneManager.LoadScene(scene.name);
     }
 
-    private IEnumerator adButtonCoroutine()
-    {       
-        panesController.stopDeadPaneCoroutine();
-
-        if (AdController.showRewardedVideoAd(true) >= 0) yield return new WaitUntil(() => AdController.lastRewAdIsFinished());         
-        panesController.adIsWasUsed = true;           
+    public IEnumerator continueGameCoroutine()
+    {               
+        panesController.continueGameIsUsed = true;           
 
         mainSquareController.startPlatform.GetComponent<PlatformState>().setPlatformState(mainSquareController.squareState);
-        panesController.hideDeadPane();
-
-        yield return new WaitForSeconds(panesController.getDeadPaneAnimator().GetCurrentAnimatorStateInfo(0).length);
 
         audioController.changeSnapshot(MusicSnapshots.game, timeToContinue + 1);
 

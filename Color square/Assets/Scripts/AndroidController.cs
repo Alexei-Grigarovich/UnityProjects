@@ -59,6 +59,7 @@ public class AndroidController : MonoBehaviour
                 }
                 else
                 {
+                    showToast("Repeat again to exit", false);
                     startTapTime = Time.time;
                     isDoubleTap = true;
                 }

@@ -28,7 +28,7 @@ public class AdController : MonoBehaviour
 
     private void PurchaseManager_OnPurchaseNonConsumable(UnityEngine.Purchasing.PurchaseEventArgs args)
     {
-        if (args.purchasedProduct.definition.id == "noads") isNoAds = true;
+        if (args.purchasedProduct.definition.id == "noads_") isNoAds = true;
     }
 
     private static void showAd(string placementId)
@@ -87,7 +87,7 @@ public class AdController : MonoBehaviour
     {
         yield return new WaitUntil(() => PurchaseManager.IsInitialized());
 
-        if (PurchaseManager.CheckBuyState("noads")) isNoAds = true;
+        if (PurchaseManager.CheckBuyState("noads_")) isNoAds = true;
         else isNoAds = false;
     }
 }

@@ -330,9 +330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1218d91116166743afa3482b0989423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTimeToDoubleTap: 1
-  achievementsIDs:
-  - CgkIhaXbp9AHEAIQAQ
+  maxTimeToDoubleTap: 2
 --- !u!4 &687435382
 Transform:
   m_ObjectHideFlags: 0

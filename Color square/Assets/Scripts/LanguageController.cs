@@ -57,5 +57,4 @@ public class LangStrings
     public string withoutAdsText;
     public string plusLiveText;
     public string freeText;
-    public string skipAdText;
 }

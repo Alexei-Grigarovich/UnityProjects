@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class TextDeterminant : MonoBehaviour
 {
-    [SerializeField] private Text adButtonText;
     [SerializeField] private Text newRecordText;
     [SerializeField] private Text ratingPaneText;
     [SerializeField] private Text pausePaneText;
@@ -15,7 +14,6 @@ public class TextDeterminant : MonoBehaviour
     [SerializeField] private Text dnt0Text;
     [SerializeField] private Text dnt1Text;
     [SerializeField] private Text rewardMoneyText;
-    [SerializeField] private Text skipAdText;
 
     void Start()
     {
@@ -24,7 +22,6 @@ public class TextDeterminant : MonoBehaviour
 
     public void setAllTexts()
     {
-        adButtonText.text = LanguageController.langStrings.adButtonText;
         newRecordText.text = LanguageController.langStrings.newRecordText;
         ratingPaneText.text = LanguageController.langStrings.rateGameText;
         pausePaneText.text = LanguageController.langStrings.pausePaneText;
@@ -34,6 +31,5 @@ public class TextDeterminant : MonoBehaviour
         dnt0Text.text = LanguageController.langStrings.backgroundsButtonText + "\n&\n" + LanguageController.langStrings.skinsButtonText;
         dnt1Text.text = LanguageController.langStrings.withoutAdsText + "\n&\n+1 " + LanguageController.langStrings.plusLiveText;
         rewardMoneyText.text = LanguageController.langStrings.freeText;
-        skipAdText.text = LanguageController.langStrings.skipAdText;
     }
 }

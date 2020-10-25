@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class PanesController : MonoBehaviour
 {
-    private Coroutine lastDeadPaneCoroutine;
     private MoneyController moneyController;
     private ButtonsController buttonsController;
     private CounterController counterController;
@@ -20,14 +19,9 @@ public class PanesController : MonoBehaviour
     [SerializeField] private GameObject shopPane;
     [SerializeField] private GameObject ratingPane;
     [SerializeField] private GameObject ratingPaneChildren;
-    [SerializeField] private GameObject timer;
-    [Space(15)]
-    [SerializeField] private RectTransform deadPaneBlurPane;
     [Space(15)]
     [SerializeField] private Image deadPaneImage;
     [SerializeField] private Image transitionPaneImage;
-    [SerializeField] private Sprite smallPane;
-    [SerializeField] private Sprite bigPane;
     [Space(15)]
     [SerializeField] private Text counterStringText;
     [SerializeField] private Text counterText;
@@ -35,21 +29,13 @@ public class PanesController : MonoBehaviour
     [SerializeField] private Text recordText;
     [SerializeField] private Text moneyEarnedStringText;
     [SerializeField] private Text moneyEarnedText;
-    [SerializeField] private Text skipAdText;
     public Text moneyX2Text;
     [Space(15)]
-    [SerializeField] private float maxTimeToDoubleTap;
     [SerializeField] private float timeTransitionPane;
-    [SerializeField] private float deadPaneTime;
-
-    private float deadPaneTimeLeft;
-    private float startTapTime;
-
-    private bool timerIsWork;    
-    private bool isDoubleTap = false;
+   
     private bool transitionIsEnd = false;
 
-    [HideInInspector] public bool adIsWasUsed;
+    [HideInInspector] public bool continueGameIsUsed;
 
     void Start()
     {
@@ -64,15 +50,14 @@ public class PanesController : MonoBehaviour
     }
 
     public void showDeadPane()
-    {
-        deadPane.SetActive(true);
+    {        
         buttonsController.pauseButton.gameObject.SetActive(false);
 
         backgroundController.pause();
         skinController.pause();
         audioController.changeSnapshot(MusicSnapshots.dead, 0.4f);
 
-        lastDeadPaneCoroutine = StartCoroutine(deadPaneCoroutine(adIsWasUsed));
+        StartCoroutine(deadPaneCoroutine());
     }
 
     public void hideDeadPane()
@@ -121,77 +106,41 @@ public class PanesController : MonoBehaviour
         TimeCounter.isMenu = true;
     }
 
-    private IEnumerator deadPaneCoroutine(bool adIsUsed)
+    private IEnumerator deadPaneCoroutine()
     {
-        if (!adIsUsed && Application.internetReachability != NetworkReachability.NotReachable)
+        if (!continueGameIsUsed && AdController.isNoAds)
         {
-            timer.SetActive(true);
-            buttonsController.adButton.gameObject.SetActive(true);
-            buttonsController.moneyX2Button.gameObject.SetActive(false);
-            buttonsController.againButton.gameObject.SetActive(false);
-            buttonsController.menuButton.gameObject.SetActive(false);
-            skipAdText.gameObject.SetActive(true);
 
-            deadPaneBlurPane.offsetMin = new Vector2(40f, 175f);
-            deadPaneBlurPane.offsetMax = new Vector2(-40f, -175f);           
-
-            deadPaneImage.sprite = smallPane;
-            deadPane.GetComponent<Animator>().SetBool("isHide", false);
-
-            timerIsWork = true;
-
-            deadPaneTimeLeft = deadPaneTime;
-            Text childrenText = timer.GetComponentInChildren<Text>();
-
-            while (deadPaneTimeLeft > 0)
-            {
-                deadPaneTimeLeft -= Time.deltaTime;
-                childrenText.text = (Mathf.RoundToInt(deadPaneTimeLeft)).ToString();
-                timer.GetComponent<Image>().fillAmount = deadPaneTimeLeft / deadPaneTime;
-
-                yield return null;
-            }
-
-            timerIsWork = false;
-
-            yield return StartCoroutine(hidePaneCoroutine(deadPane, false, false));
-        }
-
-        backgroundController.stop();
-        skinController.stop();
-
-        timer.SetActive(false);
-        buttonsController.adButton.gameObject.SetActive(false);
-        buttonsController.moneyX2Button.gameObject.SetActive(true);
-        buttonsController.againButton.gameObject.SetActive(true);
-        buttonsController.menuButton.gameObject.SetActive(true);
-        skipAdText.gameObject.SetActive(false);
-
-        if (Application.internetReachability != NetworkReachability.NotReachable && moneyController.moneyEarned > 0)
-        {
-            buttonsController.moneyX2Button.gameObject.GetComponentInParent<Animator>().SetBool("IsFade", true);
-            moneyX2Text.text = "+" + moneyController.moneyEarned;
-            buttonsController.moneyX2Button.interactable = true;
+            yield return StartCoroutine(buttonsController.continueGameCoroutine());
         }
         else
         {
-            buttonsController.moneyX2Button.interactable = false;
+            deadPane.SetActive(true);
+
+            backgroundController.stop();
+            skinController.stop();
+
+            buttonsController.moneyX2Button.gameObject.SetActive(true);
+            buttonsController.againButton.gameObject.SetActive(true);
+            buttonsController.menuButton.gameObject.SetActive(true);
+
+            if (Application.internetReachability != NetworkReachability.NotReachable && moneyController.moneyEarned > 0)
+            {
+                buttonsController.moneyX2Button.gameObject.GetComponentInParent<Animator>().SetBool("IsFade", true);
+                moneyX2Text.text = "+" + moneyController.moneyEarned;
+                buttonsController.moneyX2Button.interactable = true;
+            }
+            else
+            {
+                buttonsController.moneyX2Button.interactable = false;
+            }
+
+            counter.SetActive(false);
+
+            reloadStat();
+
+            deadPane.GetComponent<Animator>().SetBool("isHide", false);
         }
-
-        counter.SetActive(false);
-
-        reloadStat();
-
-        deadPaneBlurPane.offsetMin = new Vector2(55f, 55f);
-        deadPaneBlurPane.offsetMax = new Vector2(-55f, -55f);
-
-        deadPaneImage.sprite = bigPane;
-        deadPane.GetComponent<Animator>().SetBool("isHide", false);      
-    }
-
-    public void stopDeadPaneCoroutine()
-    {
-        StopCoroutine(lastDeadPaneCoroutine);
     }
 
     public Animator getDeadPaneAnimator()
@@ -297,65 +246,9 @@ public class PanesController : MonoBehaviour
         moneyEarnedStringText.text = LanguageController.langStrings.moneyEarnText;
         moneyEarnedText.text = "+" + moneyController.moneyEarned.ToString();
 
+        moneyController.addToMoney(moneyController.moneyEarned);
+
         TimeCounter.saveTimeInGame();
         moneyController.saveMoney();
-    }
-
-    void Update()
-    {
-        if (timerIsWork)
-        {
-#if UNITY_EDITOR
-            if (Input.GetMouseButtonDown(0))
-            {
-                if (Time.time - startTapTime > maxTimeToDoubleTap) isDoubleTap = false;
-
-                if (isDoubleTap)
-                {
-                    if (Time.time - startTapTime <= maxTimeToDoubleTap)
-                    {
-                        deadPaneTimeLeft = 0;
-                    }
-                    else
-                    {
-                        isDoubleTap = false;
-                    }
-                }
-                else
-                {
-                    startTapTime = Time.time;
-                    isDoubleTap = true;
-                }
-            }
-#endif
-#if UNITY_ANDROID && !UNITY_EDITOR
-            if (Input.touchCount > 0)
-            {
-                Touch touch = Input.GetTouch(0);
-
-                if (touch.phase == TouchPhase.Began)
-                {
-                    if (Time.time - startTapTime > maxTimeToDoubleTap) isDoubleTap = false;
-
-                    if (isDoubleTap)
-                    {
-                        if (Time.time - startTapTime <= maxTimeToDoubleTap)
-                        {
-                            deadPaneTimeLeft = 0;
-                        } 
-                        else
-                        {
-                            isDoubleTap = false;
-                        }
-                    }
-                    else
-                    {
-                        startTapTime = Time.time;
-                        isDoubleTap = true;
-                    }
-                }
-            }
-#endif
-        }
     }
 }

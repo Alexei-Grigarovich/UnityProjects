@@ -57,7 +57,7 @@ public class ShopController : MonoBehaviour
 
     private void PurchaseManager_OnPurchaseNonConsumable(PurchaseEventArgs args)
     {
-        if (args.purchasedProduct.definition.id == "noads")
+        if (args.purchasedProduct.definition.id == "noads_")
         {
             if(lastProduct != null) lastProduct.setBought();           
             buttonsController.noAdsButton.interactable = false;

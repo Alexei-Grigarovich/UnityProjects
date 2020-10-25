@@ -58,5 +58,9 @@ public class SkinBassDetectorController : MonoBehaviour
         {
             transform.localScale = Vector2.Lerp(startScale, maxScale, Mathf.Pow(bassVolume, bassPower));
         }
+        else
+        {
+            transform.localScale = startScale;
+        }
     }
 }

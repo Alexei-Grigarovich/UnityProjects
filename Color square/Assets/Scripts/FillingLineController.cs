@@ -42,7 +42,6 @@ public class FillingLineController : MonoBehaviour
             if (slider.value == 1 && !isFull)
             {
                 isFull = true;
-                moneyController.addToMoney(moneyToAdd);
                 moneyController.addToMoneyEarned(moneyToAdd);
                 audioController.playMoneySound(1f);
                 StartCoroutine(moneyTextShowCoroutine());
