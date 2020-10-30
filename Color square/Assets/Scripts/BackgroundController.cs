@@ -159,7 +159,7 @@ public class BackgroundController : MonoBehaviour
     {
         for (int i = 0; i < backgrounds.Length - 1; i++) backgrounds[i].sprite = sprite;
 
-        if (currentBackground == 1) Camera.main.backgroundColor = new Color(22f / 255f, 22f / 255f, 22f / 255f);
+        if (currentBackground == 1) Camera.main.backgroundColor = new Color(46f / 255f, 46f / 255f, 46f / 255f);
         else Camera.main.backgroundColor = Color.black;
     }
 

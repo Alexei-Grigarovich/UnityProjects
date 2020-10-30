@@ -40,6 +40,11 @@ public class BlotMovement : MonoBehaviour
             spriteRenderer.color = colorAlpha;
             blotTransform.localScale = scaleVector;
         }
+        else
+        {
+            blotTransform.localScale = minScaleVector;
+        }
+
 
         blotTransform.Translate(blotTransform.InverseTransformDirection(Vector2.left) * BlotSpawner.blotSpeed * Time.deltaTime);
     }
