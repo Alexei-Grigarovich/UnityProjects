@@ -77,6 +77,18 @@ public class CounterController : MonoBehaviour
             }
 
             counter += PlatformSpawner.getPlatformSpeed() * Time.deltaTime;
+
+            if (counter > 500)
+            {
+                AndroidController.setAchievement(GPGSIds.achievement_experienced, 100, (success) => { });
+                AndroidController.setAchievement(GPGSIds.achievement_conqueror_of_the_top_of_the_rating, 0, (success) => { });
+            }
+            if (counter > 2000)
+            {
+                AndroidController.setAchievement(GPGSIds.achievement_conqueror_of_the_top_of_the_rating, 100, (success) => { });
+                AndroidController.setAchievement(GPGSIds.achievement_korea, 0, (success) => { });
+            }
+            if (counter > 10000) AndroidController.setAchievement(GPGSIds.achievement_korea, 100, (success) => { });
         }
     }
 }

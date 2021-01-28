@@ -166,6 +166,12 @@ public class ShopController : MonoBehaviour
                     moneyController.addToMoney(-(int)product.price);
                     moneyController.saveMoney();
                     product.setBought();
+                    if (product.type == ShopProductType.skin)
+                    {
+                        AndroidController.setAchievement(GPGSIds.achievement_fashion_is_my_profession, 100, (success) => { });
+                        AndroidController.setAchievement(GPGSIds.achievement_shopping_king, 20, (success) => { });
+                    }
+                    if(product.type == ShopProductType.background) AndroidController.setAchievement(GPGSIds.achievement_glue_wallpaper, 100, (success) => { });
                 } else
                 {
                     StartCoroutine(buyButtonNoMoney(product));
@@ -199,7 +205,7 @@ public class ShopController : MonoBehaviour
             switch (product.type)
             {
                 case ShopProductType.background:
-                    backgroundController.previewBackground(product.product, product.addition);
+                    backgroundController.previewBackground(product.product, product.id, product.addition);
                     break;
                 case ShopProductType.skin:
                     skinController.previewSkin(product.product, product.skinLayer, product.addition);

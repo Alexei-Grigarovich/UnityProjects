@@ -47,6 +47,8 @@ public class ButtonsController : MonoBehaviour
     [Space(15)]
     [SerializeField, Tooltip("Reward Button")] private int timeToInteractable;
     [SerializeField] private int rewardMoneyCount;
+    [Space(15)]
+    public int moneyToX;
 
     private LanguageController languageController;
     private TextDeterminant textDeterminant;
@@ -267,12 +269,11 @@ public class ButtonsController : MonoBehaviour
             {
                 yield return new WaitUntil(() => AdController.lastRewAdIsFinished());
 
-                moneyController.addToMoney(moneyController.moneyEarned);
+                moneyController.addToMoney(moneyController.moneyEarned * (moneyToX - 1));
                 moneyController.saveMoney();
 
                 moneyX2Button.interactable = false;
-                panesController.moneyX2Text.gameObject.SetActive(true);
-                moneyX2Button.gameObject.GetComponentInParent<Animator>().SetBool("IsFade", false);
+                StartCoroutine(panesController.addingMoneyInMoneyEarnedText());
             }
         }
     }
@@ -308,11 +309,11 @@ public class ButtonsController : MonoBehaviour
         TimeCounter.isMenu = false;
         CameraFollowing.setSpeedCameraFollowing(5);
 
-        TimeCounter.sessionGamesCounter++;
         if (TimeCounter.sessionGamesCounter % countGamesForOneAd == 0)
         {
             if (AdController.showVideoAd() >= 0) yield return new WaitUntil(() => AdController.lastAdIsFinished());
         }
+        TimeCounter.sessionGamesCounter++;
 
         mainSquareController.setRandomSquareRotate();
         mainSquareController.setSquareStateFromRotate();

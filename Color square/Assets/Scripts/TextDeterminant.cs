@@ -14,6 +14,7 @@ public class TextDeterminant : MonoBehaviour
     [SerializeField] private Text dnt0Text;
     [SerializeField] private Text dnt1Text;
     [SerializeField] private Text rewardMoneyText;
+    [SerializeField] private Text x2MoneyText;
 
     void Start()
     {
@@ -31,5 +32,6 @@ public class TextDeterminant : MonoBehaviour
         dnt0Text.text = LanguageController.langStrings.backgroundsButtonText + "\n&\n" + LanguageController.langStrings.skinsButtonText;
         dnt1Text.text = LanguageController.langStrings.withoutAdsText + "\n&\n+1 " + LanguageController.langStrings.plusLiveText;
         rewardMoneyText.text = LanguageController.langStrings.freeText;
+        x2MoneyText.text = LanguageController.langStrings.freeText;
     }
 }

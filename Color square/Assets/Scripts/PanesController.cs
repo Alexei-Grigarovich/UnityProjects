@@ -29,7 +29,6 @@ public class PanesController : MonoBehaviour
     [SerializeField] private Text recordText;
     [SerializeField] private Text moneyEarnedStringText;
     [SerializeField] private Text moneyEarnedText;
-    public Text moneyX2Text;
     [Space(15)]
     [SerializeField] private float timeTransitionPane;
    
@@ -125,15 +124,8 @@ public class PanesController : MonoBehaviour
             buttonsController.menuButton.gameObject.SetActive(true);
 
             if (Application.internetReachability != NetworkReachability.NotReachable && moneyController.moneyEarned > 0)
-            {
-                buttonsController.moneyX2Button.gameObject.GetComponentInParent<Animator>().SetBool("IsFade", true);
-                moneyX2Text.text = "+" + moneyController.moneyEarned;
                 buttonsController.moneyX2Button.interactable = true;
-            }
-            else
-            {
-                buttonsController.moneyX2Button.interactable = false;
-            }
+            else buttonsController.moneyX2Button.interactable = false;
 
             counter.SetActive(false);
 
@@ -250,5 +242,19 @@ public class PanesController : MonoBehaviour
 
         TimeCounter.saveTimeInGame();
         moneyController.saveMoney();
+    }
+
+    public IEnumerator addingMoneyInMoneyEarnedText()
+    {
+        float duration = 1f;
+        float currentTime = 0;
+
+        while (currentTime < duration)
+        {
+            moneyEarnedText.text = "+" + (int)Mathf.Lerp(moneyController.moneyEarned, moneyController.moneyEarned * buttonsController.moneyToX, (currentTime / duration) * (currentTime / duration));
+            currentTime += Time.deltaTime;
+            yield return null;
+        }
+        moneyEarnedText.text = "+" + moneyController.moneyEarned * buttonsController.moneyToX;
     }
 }

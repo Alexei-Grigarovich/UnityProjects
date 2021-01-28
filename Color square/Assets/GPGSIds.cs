@@ -24,8 +24,19 @@
 
 public static class GPGSIds
 {
+        public const string achievement_i_need_a_more_gold = "CgkIhaXbp9AHEAIQCg"; // <GPGSID>
+        public const string achievement_experienced = "CgkIhaXbp9AHEAIQBg"; // <GPGSID>
+        public const string achievement_cash_is_a_king = "CgkIhaXbp9AHEAIQCw"; // <GPGSID>
         public const string achievement_welcome = "CgkIhaXbp9AHEAIQAQ"; // <GPGSID>
+        public const string achievement_shopping_king = "CgkIhaXbp9AHEAIQCQ"; // <GPGSID>
+        public const string achievement_glue_wallpaper = "CgkIhaXbp9AHEAIQBA"; // <GPGSID>
+        public const string achievement_korea = "CgkIhaXbp9AHEAIQCA"; // <GPGSID>
+        public const string achievement_hello_session_im_depressed = "CgkIhaXbp9AHEAIQDQ"; // <GPGSID>
+        public const string achievement_fashion_is_my_profession = "CgkIhaXbp9AHEAIQAw"; // <GPGSID>
+        public const string achievement_conqueror_of_the_top_of_the_rating = "CgkIhaXbp9AHEAIQBw"; // <GPGSID>
         public const string leaderboard_best_players = "CgkIhaXbp9AHEAIQAg"; // <GPGSID>
+        public const string achievement_one_hour_of_wasted_time = "CgkIhaXbp9AHEAIQDA"; // <GPGSID>
+        public const string achievement_beginner = "CgkIhaXbp9AHEAIQBQ"; // <GPGSID>
 
 }
 

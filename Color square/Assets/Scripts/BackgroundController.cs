@@ -79,9 +79,9 @@ public class BackgroundController : MonoBehaviour
         }
     }
 
-    public void previewBackground(Sprite backgroundSprite, ProductAddition addition)
+    public void previewBackground(Sprite backgroundSprite, int id, ProductAddition addition)
     {
-        StartCoroutine(previewBackgroundCoroutine(backgroundSprite, addition));
+        StartCoroutine(previewBackgroundCoroutine(backgroundSprite, id, addition));
     }
 
     public void stopPreviewBackground()
@@ -197,13 +197,17 @@ public class BackgroundController : MonoBehaviour
         backgroundSpeed = startBackgroundSpeed;
     }
 
-    IEnumerator previewBackgroundCoroutine(Sprite backgroundSprite, ProductAddition addition)
+    IEnumerator previewBackgroundCoroutine(Sprite backgroundSprite, int id, ProductAddition addition)
     {
         additionBeforePreview = currentBackgroundAddition;
         spriteBeforePreview = backgrounds[0].sprite;
 
         yield return StartCoroutine(panesController.transitionPaneCoroutine(true));
         setBackgroundSprite(backgroundSprite);
+
+        if (id == 1) Camera.main.backgroundColor = new Color(46f / 255f, 46f / 255f, 46f / 255f);
+        else Camera.main.backgroundColor = Color.black;
+
         currentBackgroundAddition = addition;
         panesController.setActiveShopPane(false);
         playAddition();

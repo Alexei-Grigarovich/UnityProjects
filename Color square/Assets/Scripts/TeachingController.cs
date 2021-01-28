@@ -199,6 +199,7 @@ public class TeachingController : MonoBehaviour
 
     void endOfTeaching()
     {
+        AndroidController.setAchievement(GPGSIds.achievement_beginner, 100, (success) => { });
         PlayerPrefs.SetInt("Teach", 1);
     }
 

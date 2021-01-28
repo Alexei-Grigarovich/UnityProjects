@@ -10,7 +10,7 @@ public class TimeCounter : MonoBehaviour
 
     public static int sessionGamesCounter;
 
-    private static float timeInGame = 0;
+    private static float timeInGame = 0; //In seconds
 
     public static bool isMenu;
     private bool ratingPaneIsShowed;
@@ -31,6 +31,7 @@ public class TimeCounter : MonoBehaviour
     public static void addOneGamesCounter()
     {
         PlayerPrefs.SetInt("GamesCount", PlayerPrefs.GetInt("GamesCount") + 1);
+        AndroidController.setAchievement(GPGSIds.achievement_hello_session_im_depressed, PlayerPrefs.GetInt("GamesCount") * 10, (success) => { });
     }
 
     public static void saveTimeInGame()
@@ -48,5 +49,7 @@ public class TimeCounter : MonoBehaviour
             PlayerPrefs.SetInt("RatingPaneIsShowed", 1);
             StartCoroutine(panesController.showRatingPaneCoroutine());
         }
+
+        if (timeInGame > 3600) AndroidController.setAchievement(GPGSIds.achievement_one_hour_of_wasted_time, 100, (success) => { });
     }
 }
